@@ -1,0 +1,629 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE’S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR LUDWIG MORENO <ludwig.moreno@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ORTHANC 1.5.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-05 19:23-0400\n"
+"PO-Revision-Date: 2020-08-30 16:05-0400\n"
+"Last-Translator: Ludwig Moreno <ludwig.moreno@gmail.com>\n"
+"Language-Team: TRANSLATORS <admin@misimagenes.online>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+
+#: explorer.php:31
+msgid "Lookup studies"
+msgstr "ルックアップスタディ"
+
+#: explorer.php:33
+msgid "Quit"
+msgstr "終了"
+
+#: explorer.php:36 explorer.php:104 explorer.php:127 explorer.php:187
+#: explorer.php:235 explorer.php:277 explorer.php:320
+msgid "Upload"
+msgstr "アップロード"
+
+#: explorer.php:37 explorer.php:105 explorer.php:128 explorer.php:188
+#: explorer.php:236 explorer.php:278 explorer.php:321 explorer.php:439
+#: explorer.php:453 explorer.php:466
+msgid "Query/Retrieve"
+msgstr "クエリ/取得"
+
+#: explorer.php:63
+msgid "Patient ID:"
+msgstr "患者 ID:"
+
+#: explorer.php:65
+msgid "Patient Name:"
+msgstr "患者名:"
+
+#: explorer.php:67
+msgid "Accession Number:"
+msgstr "加盟番号:"
+
+#: explorer.php:70
+msgid "Study Description:"
+msgstr "研究の説明:"
+
+#: explorer.php:72
+msgid "Study Date:"
+msgstr "研究日:"
+
+#: explorer.php:76 explorer.php:98
+msgid "All patients"
+msgstr "すべての患者"
+
+#: explorer.php:78 explorer.php:121
+msgid "All studies"
+msgstr "すべての研究"
+
+#: explorer.php:80
+msgid "Do lookup"
+msgstr "ルックアップを行う"
+
+#: explorer.php:87 explorer.php:111 explorer.php:134 explorer.php:170
+msgid "Warning:"
+msgstr "警告:"
+
+#: explorer.php:87
+msgid "Your lookup led to many results! Showing only"
+msgstr "あなたのルックアップは、多くの結果につながりました!表示のみ"
+
+#: explorer.php:88
+msgid "studies to avoid performance issue. Please make your query more specific, then relaunch the lookup."
+msgstr "パフォーマンスの問題を回避するための研究を行います。クエリをより具体的にして、ルックアップを再度起動してください。"
+
+#: explorer.php:100 explorer.php:123 explorer.php:146 explorer.php:183
+#: explorer.php:231 explorer.php:273 explorer.php:316 explorer.php:365
+#: explorer.php:379 explorer.php:436 explorer.php:450 explorer.php:463
+#: explorer.php:485 explorer.php:499
+msgid "Lookup"
+msgstr "ルックアップ"
+
+#: explorer.php:101 explorer.php:124 explorer.php:149 explorer.php:184
+#: explorer.php:232 explorer.php:274 explorer.php:317 explorer.php:363
+#: explorer.php:382 explorer.php:437 explorer.php:451 explorer.php:464
+#: explorer.php:488 explorer.php:500
+msgid "Plugins"
+msgstr "プラグイン"
+
+#: explorer.php:106 explorer.php:129 explorer.php:150 explorer.php:189
+#: explorer.php:237 explorer.php:279 explorer.php:322 explorer.php:368
+#: explorer.php:383 explorer.php:483 explorer.php:503
+msgid "Jobs"
+msgstr "求人"
+
+#: explorer.php:111 explorer.php:134
+msgid "This is a large Orthanc server. Showing only"
+msgstr "これは大きな Orthanc サーバーです。表示のみ"
+
+#: explorer.php:112
+msgid "patients to avoid performance issue. Make sure to use lookup if targeting specific patients!"
+msgstr "パフォーマンスの問題を回避する患者。特定の患者をターゲットにしている場合は、ルックアップを使用してください!"
+
+#: explorer.php:135
+msgid "studies to avoid performance issue. Make sure to use lookup if targeting specific studies!"
+msgstr "パフォーマンスの問題を回避するための研究を行います。特定の研究をターゲットにしている場合は、ルックアップを使用してください!"
+
+#: explorer.php:144
+msgid "Upload DICOM files"
+msgstr "DICOM ファイルのアップロード"
+
+#: explorer.php:159
+msgid "Select files to upload ..."
+msgstr "アップロードするファイルを選択します。"
+
+#: explorer.php:160
+msgid "Start the upload"
+msgstr "アップロードを開始する"
+
+#: explorer.php:163
+msgid "Clear the pending uploads"
+msgstr "保留中のアップロードをクリアする"
+
+#: explorer.php:172
+msgid "Orthanc issue #21: On Firefox, especially on Linux & OSX systems, files might be missing if using drag-and-drop. Please use the \"Select files to upload\" button instead, or use the command-line \"ImportDicomFiles.py\" script."
+msgstr "Orthanc の問題#21: Firefox、特に Linux や OSX システムでは、ドラッグ アンド ドロップを使用するとファイルが見つからない可能性があります。代わりに[アップロードするファイルを選択]ボタンを使用するか、コマンドラインの「ImportDicomFiles.py」スクリプトを使用してください。"
+
+#: explorer.php:175
+msgid "Drag and drop DICOM files here"
+msgstr "ここにDICOMファイルをドラッグ&ドロップ"
+
+#: explorer.php:181 explorer.php:228 explorer.php:270 explorer.php:312
+#: explorer.php:1009 explorer.php:1058 explorer.php:1108 explorer.php:1215
+msgid "Patient"
+msgstr "患者"
+
+#: explorer.php:197
+msgid "Unprotected"
+msgstr "無防備"
+
+#: explorer.php:198
+msgid "Protected"
+msgstr "保護された"
+
+#: explorer.php:202 explorer.php:244 explorer.php:286 explorer.php:329
+msgid "Interact"
+msgstr "インタラクト"
+
+#: explorer.php:203 explorer.php:246 libs/php/img2orthanc.php:175
+msgid "Add JPG image"
+msgstr "JPG画像を追加"
+
+#: explorer.php:204
+msgid "Delete this patient"
+msgstr "この患者を削除"
+
+#: explorer.php:206
+msgid "Send to remote modality"
+msgstr "リモート モダリティに送信"
+
+#: explorer.php:208 explorer.php:250 explorer.php:290
+msgid "Anonymize"
+msgstr "匿名"
+
+#: explorer.php:211 explorer.php:253 explorer.php:293 explorer.php:336
+msgid "Access"
+msgstr "アクセス"
+
+#: explorer.php:213 explorer.php:255 explorer.php:295 explorer.php:338
+msgid "Before anonymization"
+msgstr "匿名化前"
+
+#: explorer.php:215 explorer.php:257 explorer.php:297 explorer.php:340
+msgid "Before modification"
+msgstr "変更前"
+
+#: explorer.php:216 explorer.php:258 explorer.php:300
+msgid "Download ZIP"
+msgstr "ZIPをダウンロード"
+
+#: explorer.php:217 explorer.php:259 explorer.php:301
+msgid "Download DICOMDIR"
+msgstr "ディコムディルをダウンロード"
+
+#: explorer.php:229 explorer.php:271 explorer.php:313 explorer.php:1060
+#: explorer.php:1113 explorer.php:1220
+msgid "Study"
+msgstr "調査"
+
+#: explorer.php:245
+msgid "Append PDF report"
+msgstr "PDFレポートの追加"
+
+#: explorer.php:247
+msgid "Delete this study"
+msgstr "このスタディを削除"
+
+#: explorer.php:248 explorer.php:288 explorer.php:332
+msgid "Send to DICOM modality"
+msgstr "DICOM モダリティに送信"
+
+#: explorer.php:271 explorer.php:314 explorer.php:1117 explorer.php:1224
+msgid "Series"
+msgstr "シリーズ"
+
+#: explorer.php:287
+msgid "Delete this series"
+msgstr "このシリーズを削除"
+
+#: explorer.php:298
+msgid "Preview this series"
+msgstr "このシリーズをプレビューする"
+
+#: explorer.php:314 explorer.php:1229
+msgid "Instance"
+msgstr "インスタンス"
+
+#: explorer.php:330
+msgid "Delete this instance"
+msgstr "このインスタンスを削除"
+
+#: explorer.php:342
+msgid "Download the DICOM file"
+msgstr "DICOMファイルをダウンロードする"
+
+#: explorer.php:343
+msgid "Download the JSON file"
+msgstr "JSON ファイルのダウンロード"
+
+#: explorer.php:345
+msgid "Preview the instance"
+msgstr "インスタンスのプレビュー"
+
+#: explorer.php:351
+msgid "DICOM Tags"
+msgstr "ディコム タグ"
+
+#: explorer.php:353
+msgid "Show tag description"
+msgstr "タグの説明を表示"
+
+#: explorer.php:377 explorer.php:434 explorer.php:448 explorer.php:461
+msgid "DICOM Query/Retrieve"
+msgstr "DICOM クエリ/取得"
+
+#: explorer.php:388
+msgid "DICOM server:"
+msgstr "DICOM サーバー:"
+
+#: explorer.php:392
+msgid "Field of interest:"
+msgstr "関心のある分野:"
+
+#: explorer.php:394
+msgid "Patient ID"
+msgstr "患者 ID"
+
+#: explorer.php:396
+msgid "Patient Name"
+msgstr "患者名"
+
+#: explorer.php:398
+msgid "Accession Number"
+msgstr "加盟番号"
+
+#: explorer.php:400
+msgid "Study Description"
+msgstr "研究の説明"
+
+#: explorer.php:403
+msgid "Value for this field:"
+msgstr "このフィールドの値:"
+
+#: explorer.php:405
+msgid "Study date:"
+msgstr "研究日:"
+
+#: explorer.php:410
+msgid "Modalities:"
+msgstr "DICOMモダリティ:"
+
+#: explorer.php:425
+msgid "Test Echo"
+msgstr "テストエコー"
+
+#: explorer.php:427
+msgid "Search studies"
+msgstr "検索研究"
+
+#: explorer.php:470
+msgid "Target AET:"
+msgstr "ターゲット AET:"
+
+#: explorer.php:475
+msgid "Retrieve"
+msgstr "取得"
+
+#: explorer.php:497
+msgid "Job"
+msgstr "ジョブ"
+
+#: explorer.php:509
+msgid "Cancel job"
+msgstr "ジョブの取り消し"
+
+#: explorer.php:510
+msgid "Resubmit job"
+msgstr "ジョブの再送信"
+
+#: explorer.php:511
+msgid "Pause job"
+msgstr "ジョブの一時停止"
+
+#: explorer.php:512
+msgid "Resume job"
+msgstr "ジョブの再開"
+
+#: explorer.php:518
+msgid "Sending to Orthanc peer..."
+msgstr "Orthanc ピアに送信します。"
+
+#: explorer.php:522
+msgid "Sending to DICOM modality..."
+msgstr "DICOM モダリティに送信します。"
+
+#: explorer.php:526
+msgid "Retrieving images from DICOM modality..."
+msgstr "DICOM モダリティから画像を取得しています。"
+
+#: explorer.php:532
+msgid "Insecure setup"
+msgstr "安全でないセットアップ"
+
+#: explorer.php:533
+msgid "Your Orthanc server is accepting remote connections, but is using the default username and password, or has user authentication explicitly turned off. Please carefully read your logs and review your configuration, especially options"
+msgstr "Orthanc サーバーはリモート接続を受け付けているが、デフォルトのユーザー名とパスワードを使用しているか、ユーザー認証が明示的に無効になっている。ログを注意深く読み、設定、特にオプションを確認してください"
+
+#: explorer.php:535
+msgid "and"
+msgstr "と"
+
+#: explorer.php:553
+msgid "Please use Mozilla Firefox or Google Chrome. Microsoft Internet Explorer is not supported."
+msgstr "モジラファイアフォックスやグーグルクロームをご利用ください。インターネット エクスプローラはサポートされていません。"
+
+#: explorer.php:807
+msgid "Status: "
+msgstr "ステータス: "
+
+#: explorer.php:821
+msgid "Instance: "
+msgstr "インスタンス: "
+
+#: explorer.php:860 explorer.php:1896
+msgid "Any date"
+msgstr "の日付"
+
+#: explorer.php:861 explorer.php:1897
+msgid "Today"
+msgstr "今日"
+
+#: explorer.php:862 explorer.php:1898
+msgid "Yesterday"
+msgstr "昨日"
+
+#: explorer.php:863 explorer.php:1900
+msgid "Last 7 days"
+msgstr "過去1週間"
+
+#: explorer.php:864 explorer.php:1902
+msgid "Last 31 days"
+msgstr "過去 31 日間"
+
+#: explorer.php:866 explorer.php:1904
+msgid "Last 3 months"
+msgstr "3ヶ月"
+
+#: explorer.php:867 explorer.php:1906
+msgid "Last year"
+msgstr "前年"
+
+#: explorer.php:904
+msgid "Error during lookup"
+msgstr "ルックアップ中にエラーが発生しました"
+
+#: explorer.php:1278 explorer.php:1346 explorer.php:1614 explorer.php:1928
+msgid "OK"
+msgstr "OK"
+
+#: explorer.php:1285 explorer.php:1353 explorer.php:1636
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: explorer.php:1292
+msgid "¿Do you want to leave the DICOM Explorer?"
+msgstr "あなたはDICOMエクスプローラを離れたいですか?"
+
+#: explorer.php:1361
+msgid "Delete this instance?"
+msgstr "このインスタンスを削除しますか?"
+
+#: explorer.php:1365
+msgid "Delete this study?"
+msgstr "このスタディを削除しますか?"
+
+#: explorer.php:1369
+msgid "Delete this series?"
+msgstr "この系列を削除しますか?"
+
+#: explorer.php:1373
+msgid "Delete this patient?"
+msgstr "この患者を削除しますか?"
+
+#: explorer.php:1468
+msgid "DICOM modalities"
+msgstr "DICOMモダリティ"
+
+#: explorer.php:1491
+msgid "Orthanc peers"
+msgstr "Orthanc の仲間"
+
+#: explorer.php:1507
+msgid "Choose target"
+msgstr "ターゲットの選択"
+
+#: explorer.php:1558
+msgid "Error during store"
+msgstr "ストア中にエラーが発生しました"
+
+#: explorer.php:1644
+msgid "Anonymize this instance?"
+msgstr "このインスタンスを匿名化しますか?"
+
+#: explorer.php:1648
+msgid "Anonymize this study?"
+msgstr "この研究を匿名化?"
+
+#: explorer.php:1652
+msgid "Anonymize this series?"
+msgstr "このシリーズを匿名化?"
+
+#: explorer.php:1656
+msgid "Anonymize this patient?"
+msgstr "この患者を匿名化?"
+
+#: explorer.php:1734
+msgid "Currently running"
+msgstr "現在実行中"
+
+#: explorer.php:1737
+msgid "Pending jobs"
+msgstr "保留中のジョブ"
+
+#: explorer.php:1740
+msgid "Inactive jobs"
+msgstr "非アクティブなジョブ"
+
+#: explorer.php:1751
+msgid "ID: "
+msgstr "ID: "
+
+#: explorer.php:1752
+msgid "Local AET: "
+msgstr "ローカル AET: "
+
+#: explorer.php:1753
+msgid "Remote AET: "
+msgstr "リモート AET: "
+
+#: explorer.php:1754
+msgid "Creation time: "
+msgstr "作成時間: "
+
+#: explorer.php:1755
+msgid "Completion time: "
+msgstr "完了時間: "
+
+#: explorer.php:1757
+msgid "ETA: "
+msgstr "Eta: "
+
+#: explorer.php:1792
+msgid "General information about the job"
+msgstr "タスクに関する一般的な情報"
+
+#: explorer.php:1809
+msgid "Detailed information"
+msgstr "詳細情報"
+
+#: explorer.php:1911
+msgid "Error: The C-Echo has failed!"
+msgstr "エラー: C エコーに失敗しました!"
+
+#: explorer.php:1918
+msgid "The C-Echo has succeeded!"
+msgstr "Cエコーが成功しました!"
+
+#: explorer.php:1923
+msgid "Echo result"
+msgstr "エコー結果"
+
+#: explorer.php:1970 explorer.php:2061
+msgid "Error during query (C-Find)"
+msgstr "クエリ中にエラーが発生しました (C-検索)"
+
+#: explorer.php:2005
+msgid "Accession number: "
+msgstr "加盟番号: "
+
+#: explorer.php:2008
+msgid "Birth date: "
+msgstr "誕生日: "
+
+#: explorer.php:2011
+msgid "Patient sex: "
+msgstr "患者のセックス: "
+
+#: explorer.php:2014
+msgid "Study description: "
+msgstr "研究の説明: "
+
+#: explorer.php:2017
+msgid "Study date: "
+msgstr "研究日: "
+
+#: explorer.php:2023
+msgid "Retrieve all study"
+msgstr "すべてのスタディを取得"
+
+#: explorer.php:2086
+msgid "Modality: "
+msgstr "モダリティ: "
+
+#: explorer.php:2094
+msgid "Protocol Name: "
+msgstr "プロトコル名: "
+
+#: explorer.php:2175
+msgid "Error during retrieve"
+msgstr "取得中にエラーが発生しました"
+
+#: explorer.php:2210
+msgid "Done"
+msgstr "完了"
+
+#: explorer.php:2216
+msgid "Failure"
+msgstr "失敗"
+
+#: explorer.php:2227
+msgid "Uploading: "
+msgstr "アップロード: "
+
+#: libs/php/img2orthanc.php:176 libs/php/pdf2orthanc.php:149
+msgid "to include it in the DICOM DB"
+msgstr "DICOM DB に含める"
+
+#: libs/php/img2orthanc.php:178 libs/php/pdf2orthanc.php:151
+msgid "Sorry, your browser is not accepting CANVAS HTML tag."
+msgstr "お使いのブラウザで CANVAS HTML タグが使用できません。"
+
+#: libs/php/img2orthanc.php:179 libs/php/pdf2orthanc.php:152
+msgid "Select file"
+msgstr "ファイルを選択"
+
+#: libs/php/login-vista.php:5 libs/php/register-vista.php:5
+msgid "Login/Register DICOM DB user"
+msgstr "ログイン/登録 DICOM DB ユーザー"
+
+#: libs/php/login-vista.php:22 libs/php/login-vista.php:44
+#: libs/php/register-vista.php:22
+msgid "Login"
+msgstr "ログイン"
+
+#: libs/php/login-vista.php:23 libs/php/register-vista.php:23
+#: libs/php/register-vista.php:53
+msgid "Register"
+msgstr "登録"
+
+#: libs/php/login-vista.php:28 libs/php/register-vista.php:28
+msgid "Access the"
+msgstr "アクセス"
+
+#: libs/php/login-vista.php:28 libs/php/register-vista.php:28
+msgid "DICOM web"
+msgstr "DICOM サーバー"
+
+#: libs/php/login-vista.php:31 libs/php/register-vista.php:36
+msgid "Username"
+msgstr "ユーザー名"
+
+#: libs/php/login-vista.php:35 libs/php/register-vista.php:40
+msgid "Password"
+msgstr "パスワード"
+
+#: libs/php/pdf2orthanc.php:148
+msgid "Attach PDF report"
+msgstr "PDFレポートの追加"
+
+#: libs/php/register-vista.php:32
+msgid "eMail"
+msgstr "eメール"
+
+#: libs/php/register-vista.php:44
+msgid "Confirm Password"
+msgstr "パスワードを確認"
+
+msgid "Please complete all the fields"
+msgstr "すべてのフィールドに入力してください"
+
+msgid "This username is already registered"
+msgstr "このユーザー名は既に登録されています"
+
+msgid "Passwords do not match"
+msgstr "パスワードが一致しません"
+
+msgid "The user has been successfully registered"
+msgstr "ユーザーは正常に登録されました"
+
+msgid "This username is not registered"
+msgstr "このユーザー名は登録されていません"

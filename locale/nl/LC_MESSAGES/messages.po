@@ -1,0 +1,629 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE’S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR LUDWIG MORENO <ludwig.moreno@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ORTHANC 1.5.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-05 19:23-0400\n"
+"PO-Revision-Date: 2020-08-30 16:06-0400\n"
+"Last-Translator: Ludwig Moreno <ludwig.moreno@gmail.com>\n"
+"Language-Team: TRANSLATORS <admin@misimagenes.online>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+
+#: explorer.php:31
+msgid "Lookup studies"
+msgstr "Opzoekstudies"
+
+#: explorer.php:33
+msgid "Quit"
+msgstr "Beenden"
+
+#: explorer.php:36 explorer.php:104 explorer.php:127 explorer.php:187
+#: explorer.php:235 explorer.php:277 explorer.php:320
+msgid "Upload"
+msgstr "Uploaden"
+
+#: explorer.php:37 explorer.php:105 explorer.php:128 explorer.php:188
+#: explorer.php:236 explorer.php:278 explorer.php:321 explorer.php:439
+#: explorer.php:453 explorer.php:466
+msgid "Query/Retrieve"
+msgstr "Vragen / ophalen"
+
+#: explorer.php:63
+msgid "Patient ID:"
+msgstr "Patiënt-ID:"
+
+#: explorer.php:65
+msgid "Patient Name:"
+msgstr "Naam patiënt:"
+
+#: explorer.php:67
+msgid "Accession Number:"
+msgstr "Toetredingsnummer:"
+
+#: explorer.php:70
+msgid "Study Description:"
+msgstr "Beschrijving van de studie:"
+
+#: explorer.php:72
+msgid "Study Date:"
+msgstr "Studiedatum:"
+
+#: explorer.php:76 explorer.php:98
+msgid "All patients"
+msgstr "Alle patiënten"
+
+#: explorer.php:78 explorer.php:121
+msgid "All studies"
+msgstr "Alle studies"
+
+#: explorer.php:80
+msgid "Do lookup"
+msgstr "Do lookup"
+
+#: explorer.php:87 explorer.php:111 explorer.php:134 explorer.php:170
+msgid "Warning:"
+msgstr "Waarschuwing:"
+
+#: explorer.php:87
+msgid "Your lookup led to many results! Showing only"
+msgstr "Uw lookup leidde tot vele resultaten! Alleen weergeven"
+
+#: explorer.php:88
+msgid "studies to avoid performance issue. Please make your query more specific, then relaunch the lookup."
+msgstr "studies om prestatieproblemen te voorkomen. Maak uw query specifieker en start de lookup opnieuw."
+
+#: explorer.php:100 explorer.php:123 explorer.php:146 explorer.php:183
+#: explorer.php:231 explorer.php:273 explorer.php:316 explorer.php:365
+#: explorer.php:379 explorer.php:436 explorer.php:450 explorer.php:463
+#: explorer.php:485 explorer.php:499
+msgid "Lookup"
+msgstr "Opzoeken"
+
+#: explorer.php:101 explorer.php:124 explorer.php:149 explorer.php:184
+#: explorer.php:232 explorer.php:274 explorer.php:317 explorer.php:363
+#: explorer.php:382 explorer.php:437 explorer.php:451 explorer.php:464
+#: explorer.php:488 explorer.php:500
+msgid "Plugins"
+msgstr "Plug-ins"
+
+#: explorer.php:106 explorer.php:129 explorer.php:150 explorer.php:189
+#: explorer.php:237 explorer.php:279 explorer.php:322 explorer.php:368
+#: explorer.php:383 explorer.php:483 explorer.php:503
+msgid "Jobs"
+msgstr "Taken"
+
+#: explorer.php:111 explorer.php:134
+msgid "This is a large Orthanc server. Showing only"
+msgstr "Dit is een grote Orthanc server. Alleen weergeven"
+
+#: explorer.php:112
+msgid "patients to avoid performance issue. Make sure to use lookup if targeting specific patients!"
+msgstr "patiënten om prestatieproblemen te voorkomen. Zorg ervoor dat je lookup gebruikt als je specifieke patiënten target!"
+
+#: explorer.php:135
+msgid "studies to avoid performance issue. Make sure to use lookup if targeting specific studies!"
+msgstr "studies om prestatieproblemen te voorkomen. Zorg ervoor dat je lookup gebruikt als je specifieke studies target!"
+
+#: explorer.php:144
+msgid "Upload DICOM files"
+msgstr "DICOM-bestanden uploaden"
+
+#: explorer.php:159
+msgid "Select files to upload ..."
+msgstr "Selecteer bestanden om te uploaden ..."
+
+#: explorer.php:160
+msgid "Start the upload"
+msgstr "De upload starten"
+
+#: explorer.php:163
+msgid "Clear the pending uploads"
+msgstr "De in behandeling zijnde uploads wissen"
+
+#: explorer.php:172
+msgid "Orthanc issue #21: On Firefox, especially on Linux & OSX systems, files might be missing if using drag-and-drop. Please use the \"Select files to upload\" button instead, or use the command-line \"ImportDicomFiles.py\" script."
+msgstr "Orthanc issue #21: Op Firefox, vooral op Linux & OSX-systemen, kunnen bestanden ontbreken als je drag-and-drop gebruikt. Gebruik in plaats daarvan de knop Bestanden selecteren om te uploaden of gebruik het script 'ImportDicomFiles.py'."
+
+#: explorer.php:175
+msgid "Drag and drop DICOM files here"
+msgstr "Dicom-bestanden hier slepen en neerzetten"
+
+#: explorer.php:181 explorer.php:228 explorer.php:270 explorer.php:312
+#: explorer.php:1009 explorer.php:1058 explorer.php:1108 explorer.php:1215
+msgid "Patient"
+msgstr "Geduldig"
+
+#: explorer.php:197
+msgid "Unprotected"
+msgstr "Onbeschermd"
+
+#: explorer.php:198
+msgid "Protected"
+msgstr "Beschermd"
+
+#: explorer.php:202 explorer.php:244 explorer.php:286 explorer.php:329
+msgid "Interact"
+msgstr "Interactie"
+
+#: explorer.php:203 explorer.php:246 libs/php/img2orthanc.php:175
+msgid "Add JPG image"
+msgstr "JPG-afbeelding toevoegen"
+
+#: explorer.php:204
+msgid "Delete this patient"
+msgstr "Deze patiënt verwijderen"
+
+#: explorer.php:206
+msgid "Send to remote modality"
+msgstr "Verzenden naar externe modaliteit"
+
+#: explorer.php:208 explorer.php:250 explorer.php:290
+msgid "Anonymize"
+msgstr "Anonimiseer"
+
+#: explorer.php:211 explorer.php:253 explorer.php:293 explorer.php:336
+msgid "Access"
+msgstr "Toegang"
+
+#: explorer.php:213 explorer.php:255 explorer.php:295 explorer.php:338
+msgid "Before anonymization"
+msgstr "Before anonymization"
+
+#: explorer.php:215 explorer.php:257 explorer.php:297 explorer.php:340
+msgid "Before modification"
+msgstr "Before modification"
+
+#: explorer.php:216 explorer.php:258 explorer.php:300
+msgid "Download ZIP"
+msgstr "ZIP downloaden"
+
+#: explorer.php:217 explorer.php:259 explorer.php:301
+msgid "Download DICOMDIR"
+msgstr "Dicomdir downloaden"
+
+#: explorer.php:229 explorer.php:271 explorer.php:313 explorer.php:1060
+#: explorer.php:1113 explorer.php:1220
+msgid "Study"
+msgstr "Studie"
+
+#: explorer.php:245
+msgid "Append PDF report"
+msgstr "PDF-rapport bijvoegen"
+
+#: explorer.php:247
+msgid "Delete this study"
+msgstr "Deze studie verwijderen"
+
+#: explorer.php:248 explorer.php:288 explorer.php:332
+msgid "Send to DICOM modality"
+msgstr "Verzenden naar DICOM-modaliteit"
+
+#: explorer.php:271 explorer.php:314 explorer.php:1117 explorer.php:1224
+msgid "Series"
+msgstr "Reeksen"
+
+#: explorer.php:287
+msgid "Delete this series"
+msgstr "Deze serie verwijderen"
+
+#: explorer.php:298
+msgid "Preview this series"
+msgstr "Bekijk een voorbeeld van deze serie"
+
+#: explorer.php:314 explorer.php:1229
+msgid "Instance"
+msgstr "Instantie"
+
+#: explorer.php:330
+msgid "Delete this instance"
+msgstr "Deze instantie verwijderen"
+
+#: explorer.php:342
+msgid "Download the DICOM file"
+msgstr "Het DICOM-bestand downloaden"
+
+#: explorer.php:343
+msgid "Download the JSON file"
+msgstr "Download het JSON-bestand"
+
+#: explorer.php:345
+msgid "Preview the instance"
+msgstr "Bekijk een voorbeeld van de instantie"
+
+#: explorer.php:351
+msgid "DICOM Tags"
+msgstr "DICOM-tags"
+
+#: explorer.php:353
+msgid "Show tag description"
+msgstr "Tagbeschrijving weergeven"
+
+#: explorer.php:377 explorer.php:434 explorer.php:448 explorer.php:461
+msgid "DICOM Query/Retrieve"
+msgstr "DICOM Vragen / ophalen"
+
+#: explorer.php:388
+msgid "DICOM server:"
+msgstr "DICOM-server:"
+
+#: explorer.php:392
+msgid "Field of interest:"
+msgstr "Interessegebied:"
+
+#: explorer.php:394
+msgid "Patient ID"
+msgstr "Patiënt-ID"
+
+#: explorer.php:396
+msgid "Patient Name"
+msgstr "Patiëntnaam"
+
+#: explorer.php:398
+msgid "Accession Number"
+msgstr "Toetredingsnummer"
+
+#: explorer.php:400
+msgid "Study Description"
+msgstr "Beschrijving van de studie"
+
+#: explorer.php:403
+msgid "Value for this field:"
+msgstr "Waarde voor dit veld:"
+
+#: explorer.php:405
+msgid "Study date:"
+msgstr "Studiedatum:"
+
+#: explorer.php:410
+msgid "Modalities:"
+msgstr "Modaliteiten:"
+
+#: explorer.php:425
+msgid "Test Echo"
+msgstr "Test Echo"
+
+#: explorer.php:427
+msgid "Search studies"
+msgstr "Zoekstudies"
+
+#: explorer.php:470
+msgid "Target AET:"
+msgstr "Doel AET:"
+
+#: explorer.php:475
+msgid "Retrieve"
+msgstr "Opvragen"
+
+#: explorer.php:497
+msgid "Job"
+msgstr "Taak"
+
+#: explorer.php:509
+msgid "Cancel job"
+msgstr "Taak annuleren"
+
+#: explorer.php:510
+msgid "Resubmit job"
+msgstr "Taak opnieuw indienen"
+
+#: explorer.php:511
+msgid "Pause job"
+msgstr "Taak pauzeren"
+
+#: explorer.php:512
+msgid "Resume job"
+msgstr "Taak hervatten"
+
+#: explorer.php:518
+msgid "Sending to Orthanc peer..."
+msgstr "Verzenden naar Orthanc peer ..."
+
+#: explorer.php:522
+msgid "Sending to DICOM modality..."
+msgstr "Verzenden naar DICOM modaliteit..."
+
+#: explorer.php:526
+msgid "Retrieving images from DICOM modality..."
+msgstr "Afbeeldingen ophalen van DICOM-modaliteit..."
+
+#: explorer.php:532
+msgid "Insecure setup"
+msgstr "Onveilige installatie"
+
+#: explorer.php:533
+msgid "Your Orthanc server is accepting remote connections, but is using the default username and password, or has user authentication explicitly turned off. Please carefully read your logs and review your configuration, especially options"
+msgstr "Uw Orthanc-server accepteert externe verbindingen, maar gebruikt de standaardgebruikersnaam en het wachtwoord of heeft gebruikersverificatie expliciet uitgeschakeld. Lees uw logboeken zorgvuldig en bekijk uw configuratie, met name opties"
+
+#: explorer.php:535
+msgid "and"
+msgstr "en"
+
+#: explorer.php:553
+msgid "Please use Mozilla Firefox or Google Chrome. Microsoft Internet Explorer is not supported."
+msgstr "Gebruik Mozilla Firefox of Google Chrome. Microsoft Internet Explorer wordt niet ondersteund."
+
+#: explorer.php:807
+msgid "Status: "
+msgstr "Status: "
+
+#: explorer.php:821
+msgid "Instance: "
+msgstr "Exemplaar: "
+
+#: explorer.php:860 explorer.php:1896
+msgid "Any date"
+msgstr "Een datum"
+
+#: explorer.php:861 explorer.php:1897
+msgid "Today"
+msgstr "Vandaag"
+
+#: explorer.php:862 explorer.php:1898
+msgid "Yesterday"
+msgstr "Gisteren"
+
+#: explorer.php:863 explorer.php:1900
+msgid "Last 7 days"
+msgstr "Laatste 7 dagen"
+
+#: explorer.php:864 explorer.php:1902
+msgid "Last 31 days"
+msgstr "Last 31 days"
+
+#: explorer.php:866 explorer.php:1904
+msgid "Last 3 months"
+msgstr "Laatste 3 maanden"
+
+#: explorer.php:867 explorer.php:1906
+msgid "Last year"
+msgstr "Vorig jaar"
+
+#: explorer.php:904
+msgid "Error during lookup"
+msgstr "Fout tijdens het opzoeken"
+
+#: explorer.php:1278 explorer.php:1346 explorer.php:1614 explorer.php:1928
+msgid "OK"
+msgstr "OK"
+
+#: explorer.php:1285 explorer.php:1353 explorer.php:1636
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: explorer.php:1292
+msgid "¿Do you want to leave the DICOM Explorer?"
+msgstr "¿Wilt u de DICOM Explorer verlaten?"
+
+#: explorer.php:1361
+msgid "Delete this instance?"
+msgstr "Deze instantie verwijderen?"
+
+#: explorer.php:1365
+msgid "Delete this study?"
+msgstr "Deze studie verwijderen?"
+
+#: explorer.php:1369
+msgid "Delete this series?"
+msgstr "Deze serie verwijderen?"
+
+#: explorer.php:1373
+msgid "Delete this patient?"
+msgstr "Deze patiënt verwijderen?"
+
+#: explorer.php:1468
+msgid "DICOM modalities"
+msgstr "DICOM-modaliteiten"
+
+#: explorer.php:1491
+msgid "Orthanc peers"
+msgstr "Orthanc peers"
+
+#: explorer.php:1507
+msgid "Choose target"
+msgstr "Doel kiezen"
+
+#: explorer.php:1558
+msgid "Error during store"
+msgstr "Fout tijdens winkel"
+
+#: explorer.php:1644
+msgid "Anonymize this instance?"
+msgstr "Deze instantie anonimiseren?"
+
+#: explorer.php:1648
+msgid "Anonymize this study?"
+msgstr "Deze studie anonimiseren?"
+
+#: explorer.php:1652
+msgid "Anonymize this series?"
+msgstr "Deze serie anonimiseren?"
+
+#: explorer.php:1656
+msgid "Anonymize this patient?"
+msgstr "Deze patiënt anonimiseren?"
+
+#: explorer.php:1734
+msgid "Currently running"
+msgstr "Momenteel actief"
+
+#: explorer.php:1737
+msgid "Pending jobs"
+msgstr "Taken in behandeling"
+
+#: explorer.php:1740
+msgid "Inactive jobs"
+msgstr "Inactieve taken"
+
+#: explorer.php:1751
+msgid "ID: "
+msgstr "ID: "
+
+#: explorer.php:1752
+msgid "Local AET: "
+msgstr "Lokale AET: "
+
+#: explorer.php:1753
+msgid "Remote AET: "
+msgstr "AET op afstand: "
+
+#: explorer.php:1754
+msgid "Creation time: "
+msgstr "Creatietijd: "
+
+#: explorer.php:1755
+msgid "Completion time: "
+msgstr "Voltooiingstijd: "
+
+#: explorer.php:1757
+msgid "ETA: "
+msgstr "ETA: "
+
+#: explorer.php:1792
+msgid "General information about the job"
+msgstr "Algemene informatie over de functie"
+
+#: explorer.php:1809
+msgid "Detailed information"
+msgstr "Gedetailleerde informatie"
+
+#: explorer.php:1911
+msgid "Error: The C-Echo has failed!"
+msgstr "Fout: De C-Echo is mislukt!"
+
+#: explorer.php:1918
+msgid "The C-Echo has succeeded!"
+msgstr "De C-Echo is geslaagd!"
+
+#: explorer.php:1923
+msgid "Echo result"
+msgstr "Echo resultaat"
+
+#: explorer.php:1970 explorer.php:2061
+msgid "Error during query (C-Find)"
+msgstr "Fout tijdens query (C-Find)"
+
+#: explorer.php:2005
+msgid "Accession number: "
+msgstr "Toetredingsnummer: "
+
+#: explorer.php:2008
+msgid "Birth date: "
+msgstr "Geboortedatum: "
+
+#: explorer.php:2011
+msgid "Patient sex: "
+msgstr "Patiënt seks: "
+
+#: explorer.php:2014
+msgid "Study description: "
+msgstr "Studiebeschrijving: "
+
+#: explorer.php:2017
+msgid "Study date: "
+msgstr "Studiedatum: "
+
+#: explorer.php:2023
+msgid "Retrieve all study"
+msgstr "Alle studie ophalen"
+
+#: explorer.php:2086
+msgid "Modality: "
+msgstr "Modaliteit: "
+
+#: explorer.php:2094
+msgid "Protocol Name: "
+msgstr "Protocolnaam: "
+
+#: explorer.php:2175
+msgid "Error during retrieve"
+msgstr "Fout tijdens ophalen"
+
+#: explorer.php:2210
+msgid "Done"
+msgstr "Klaar"
+
+#: explorer.php:2216
+msgid "Failure"
+msgstr "Mislukt"
+
+#: explorer.php:2227
+msgid "Uploading: "
+msgstr "Uploaden: "
+
+#: libs/php/img2orthanc.php:176 libs/php/pdf2orthanc.php:149
+msgid "to include it in the DICOM DB"
+msgstr "om het op te nemen in de DICOM DB"
+
+#: libs/php/img2orthanc.php:178 libs/php/pdf2orthanc.php:151
+msgid "Sorry, your browser is not accepting CANVAS HTML tag."
+msgstr "Uw browser accepteert geen HTML-tag voor CANVAS."
+
+#: libs/php/img2orthanc.php:179 libs/php/pdf2orthanc.php:152
+msgid "Select file"
+msgstr "Selecteer bestand"
+
+#: libs/php/login-vista.php:5 libs/php/register-vista.php:5
+msgid "Login/Register DICOM DB user"
+msgstr "Aanmelding/Dicom DB-gebruiker registreren"
+
+#: libs/php/login-vista.php:22 libs/php/login-vista.php:44
+#: libs/php/register-vista.php:22
+msgid "Login"
+msgstr "Inloggen"
+
+#: libs/php/login-vista.php:23 libs/php/register-vista.php:23
+#: libs/php/register-vista.php:53
+msgid "Register"
+msgstr "Registreren"
+
+#: libs/php/login-vista.php:28 libs/php/register-vista.php:28
+msgid "Access the"
+msgstr "Toegang"
+
+#: libs/php/login-vista.php:28 libs/php/register-vista.php:28
+msgid "DICOM web"
+msgstr "DICOM-server"
+
+#: libs/php/login-vista.php:31 libs/php/register-vista.php:36
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: libs/php/login-vista.php:35 libs/php/register-vista.php:40
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: libs/php/pdf2orthanc.php:148
+msgid "Attach PDF report"
+msgstr "PDF-rapport bijvoegen"
+
+#: libs/php/register-vista.php:32
+msgid "eMail"
+msgstr "e-mail"
+
+#: libs/php/register-vista.php:44
+msgid "Confirm Password"
+msgstr "Bevestig wachtwoord"
+
+msgid "Please complete all the fields"
+msgstr "Vul alle velden in"
+
+msgid "This username is already registered"
+msgstr "Deze gebruikersnaam is al geregistreerd"
+
+msgid "Passwords do not match"
+msgstr "Wachtwoorden komen niet overeen"
+
+msgid "The user has been successfully registered"
+msgstr "De gebruiker is met succes geregistreerd"
+
+msgid "This username is not registered"
+msgstr "Deze gebruikersnaam is niet geregistreerd"

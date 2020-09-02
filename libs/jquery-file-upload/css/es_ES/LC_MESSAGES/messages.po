@@ -1,0 +1,755 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ORTHANC 1.5.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-14 08:43-0400\n"
+"PO-Revision-Date: 2020-06-14 10:17-0400\n"
+"Last-Translator: Ludwig Moreno <ludwig.moreno@gmail.com>\n"
+"Language-Team: TRANSLATORS <admin@misimagenes.online>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#
+# File: explorer.php, line: 58
+msgid "Lookup studies"
+msgstr "Buscar Estudios"
+
+#
+# File: explorer.php, line: 60
+# File: explorer.php, line: 112
+# File: explorer.php, line: 135
+# File: explorer.php, line: 158
+# File: explorer.php, line: 191
+# File: explorer.php, line: 242
+# File: explorer.php, line: 286
+# File: explorer.php, line: 333
+# File: explorer.php, line: 386
+# File: explorer.php, line: 398
+# File: explorer.php, line: 454
+# File: explorer.php, line: 468
+# File: explorer.php, line: 481
+# File: explorer.php, line: 503
+# File: explorer.php, line: 515
+msgid "Lookup"
+msgstr "Buscar"
+
+#
+# File: explorer.php, line: 61
+# File: explorer.php, line: 113
+# File: explorer.php, line: 136
+# File: explorer.php, line: 159
+# File: explorer.php, line: 192
+# File: explorer.php, line: 243
+# File: explorer.php, line: 287
+# File: explorer.php, line: 334
+# File: explorer.php, line: 384
+# File: explorer.php, line: 387
+# File: explorer.php, line: 399
+# File: explorer.php, line: 455
+# File: explorer.php, line: 469
+# File: explorer.php, line: 482
+# File: explorer.php, line: 504
+# File: explorer.php, line: 516
+msgid "Plugins"
+msgstr "Complementos"
+
+#
+# File: explorer.php, line: 64
+# File: explorer.php, line: 116
+# File: explorer.php, line: 139
+# File: explorer.php, line: 195
+# File: explorer.php, line: 246
+# File: explorer.php, line: 290
+# File: explorer.php, line: 337
+msgid "Upload"
+msgstr "Subir"
+
+#
+# File: explorer.php, line: 65
+# File: explorer.php, line: 117
+# File: explorer.php, line: 140
+# File: explorer.php, line: 196
+# File: explorer.php, line: 247
+# File: explorer.php, line: 291
+# File: explorer.php, line: 338
+# File: explorer.php, line: 457
+# File: explorer.php, line: 471
+# File: explorer.php, line: 484
+msgid "Query/Retrieve"
+msgstr "Consulta / Recuperar"
+
+#
+# File: explorer.php, line: 66
+# File: explorer.php, line: 118
+# File: explorer.php, line: 141
+# File: explorer.php, line: 197
+# File: explorer.php, line: 248
+# File: explorer.php, line: 292
+# File: explorer.php, line: 339
+# File: explorer.php, line: 501
+# File: explorer.php, line: 519
+msgid "Jobs"
+msgstr "Trabajos"
+
+#
+# File: explorer.php, line: 74
+msgid "Patient ID:"
+msgstr "ID del paciente:"
+
+#
+# File: explorer.php, line: 76
+msgid "Patient Name:"
+msgstr "Nombre del paciente:"
+
+#
+# File: explorer.php, line: 79
+msgid "Accession Number:"
+msgstr "Número de acceso:"
+
+#
+# File: explorer.php, line: 82
+msgid "Study Description:"
+msgstr "Descripción del estudio:"
+
+#
+# File: explorer.php, line: 84
+msgid "Study Date:"
+msgstr "Fecha de estudio:"
+
+#
+# File: explorer.php, line: 88
+# File: explorer.php, line: 110
+msgid "All patients"
+msgstr "Todos los pacientes"
+
+#
+# File: explorer.php, line: 90
+# File: explorer.php, line: 133
+msgid "All studies"
+msgstr "Todos los estudios"
+
+#
+# File: explorer.php, line: 92
+msgid "Do lookup"
+msgstr "Hacer búsquedas"
+
+#
+# File: explorer.php, line: 99
+# File: explorer.php, line: 123
+# File: explorer.php, line: 146
+# File: explorer.php, line: 179
+msgid "Warning:"
+msgstr "Advertencia:"
+
+#
+# File: explorer.php, line: 99
+msgid "Your lookup led to many results! Showing only"
+msgstr "¡Su búsqueda condujo a muchos resultados! Mostrando solamente"
+
+#
+# File: explorer.php, line: 100
+msgid "studies to avoid performance issue. Please make your query more specific, then relaunch the lookup."
+msgstr "estudios para evitar problemas de rendimiento. Haga su consulta más específica, luego vuelva a iniciar la búsqueda."
+
+#
+# File: explorer.php, line: 123
+# File: explorer.php, line: 146
+msgid "This is a large Orthanc server. Showing only"
+msgstr "Este es un servidor Orthanc de gran tamaño. Mostrando solamente"
+
+#
+# File: explorer.php, line: 124
+msgid "patients to avoid performance issue. Make sure to use lookup if targeting specific patients!"
+msgstr "pacientes para evitar problemas de rendimiento. ¡Asegúrese de usar la búsqueda si se dirige a pacientes específicos!"
+
+#
+# File: explorer.php, line: 147
+msgid "studies to avoid performance issue. Make sure to use lookup if targeting specific studies!"
+msgstr "estudios para evitar problemas de rendimiento. ¡Asegúrese de usar la búsqueda si se dirige a estudios específicos!"
+
+#
+# File: explorer.php, line: 156
+msgid "Upload DICOM files"
+msgstr "Subir archivos DICOM"
+
+#
+# File: explorer.php, line: 168
+msgid "Select files to upload ..."
+msgstr "Seleccionar archivos para cargar ..."
+
+#
+# File: explorer.php, line: 169
+msgid "Start the upload"
+msgstr "Comience la carga"
+
+#
+# File: explorer.php, line: 172
+msgid "Clear the pending uploads"
+msgstr "Borrar las cargas pendientes"
+
+#
+# File: explorer.php, line: 180
+msgid "Orthanc issue #21: On Firefox, especially on Linux & OSX systems, files might be missing if using drag-and-drop. Please use the \"Select files to upload\" button instead, or use the command-line \"ImportDicomFiles.py\" script."
+msgstr "Problema # 21 de Orthanc: en Firefox, especialmente en sistemas Linux y OSX, es posible que falten archivos si se usa arrastrar y soltar. Utilice el botón \"Seleccionar archivos para cargar\" en su lugar, o utilice la secuencia de comandos \"ImportDicomFiles.py\" de la línea de comandos."
+
+#
+# File: explorer.php, line: 183
+msgid "Drag and drop DICOM files here"
+msgstr "Arrastrar y soltar archivos DICOM aquí"
+
+#
+# File: explorer.php, line: 189
+# File: explorer.php, line: 239
+# File: explorer.php, line: 283
+# File: explorer.php, line: 329
+msgid "Patient"
+msgstr "Paciente"
+
+#
+# File: explorer.php, line: 206
+msgid "Unprotected"
+msgstr "Desprotegido"
+
+#
+# File: explorer.php, line: 207
+msgid "Protected"
+msgstr "Protegido"
+
+#
+# File: explorer.php, line: 211
+# File: explorer.php, line: 256
+# File: explorer.php, line: 300
+# File: explorer.php, line: 347
+msgid "Interact"
+msgstr "Interactuar"
+
+#
+# File: explorer.php, line: 212
+msgid "Delete this patient"
+msgstr "Eliminar a este paciente"
+
+#
+# File: explorer.php, line: 214
+msgid "Send to remote modality"
+msgstr "Enviar a sistema remoto"
+
+#
+# File: explorer.php, line: 216
+# File: explorer.php, line: 260
+# File: explorer.php, line: 304
+msgid "Anonymize"
+msgstr "Anonimizar"
+
+#
+# File: explorer.php, line: 219
+# File: explorer.php, line: 263
+# File: explorer.php, line: 307
+# File: explorer.php, line: 354
+msgid "Access"
+msgstr "Acceder"
+
+#
+# File: explorer.php, line: 221
+# File: explorer.php, line: 265
+# File: explorer.php, line: 309
+# File: explorer.php, line: 356
+msgid "Before anonymization"
+msgstr "Antes de anonimizar"
+
+#
+# File: explorer.php, line: 223
+# File: explorer.php, line: 267
+# File: explorer.php, line: 311
+# File: explorer.php, line: 358
+msgid "Before modification"
+msgstr "Antes de modificar"
+
+#
+# File: explorer.php, line: 224
+# File: explorer.php, line: 268
+# File: explorer.php, line: 314
+msgid "Download ZIP"
+msgstr "Descargar ZIP"
+
+#
+# File: explorer.php, line: 225
+# File: explorer.php, line: 269
+# File: explorer.php, line: 315
+msgid "Download DICOMDIR"
+msgstr "Descargar DICOMDIR"
+
+#
+# File: explorer.php, line: 257
+msgid "Delete this study"
+msgstr "Eliminar este estudio"
+
+#
+# File: explorer.php, line: 258
+# File: explorer.php, line: 302
+# File: explorer.php, line: 350
+msgid "Send to DICOM modality"
+msgstr "Enviar a la modalidad DICOM"
+
+#
+# File: explorer.php, line: 284
+# File: explorer.php, line: 330
+msgid "Study"
+msgstr "Estudio"
+
+#
+# File: explorer.php, line: 284
+# File: explorer.php, line: 331
+msgid "Series"
+msgstr "Serie"
+
+#
+# File: explorer.php, line: 301
+msgid "Delete this series"
+msgstr "Eliminar esta serie"
+
+#
+# File: explorer.php, line: 312
+msgid "Preview this series"
+msgstr "Previsualizar esta serie"
+
+#
+# File: explorer.php, line: 331
+msgid "Instance"
+msgstr "Instancia"
+
+#
+# File: explorer.php, line: 348
+msgid "Delete this instance"
+msgstr "Eliminar este elemento"
+
+#
+# File: explorer.php, line: 360
+msgid "Download the DICOM file"
+msgstr "Descargue el archivo DICOM"
+
+#
+# File: explorer.php, line: 362
+msgid "Download the JSON file"
+msgstr "Descargue el archivo JSON"
+
+#
+# File: explorer.php, line: 363
+msgid "Preview the instance"
+msgstr "Vista previa de la instancia"
+
+#
+# File: explorer.php, line: 371
+msgid "DICOM Tags"
+msgstr "Etiquetas DICOM"
+
+#
+# File: explorer.php, line: 373
+msgid "Show tag description"
+msgstr "Descripción del estudio"
+
+#
+# File: explorer.php, line: 396
+# File: explorer.php, line: 452
+# File: explorer.php, line: 466
+# File: explorer.php, line: 479
+msgid "DICOM Query/Retrieve"
+msgstr "DICOM Consultas / Recuperación"
+
+#
+# File: explorer.php, line: 404
+msgid "DICOM server:"
+msgstr "Servidor DICOM"
+
+#
+# File: explorer.php, line: 408
+msgid "Field of interest:"
+msgstr "Campo de interés:"
+
+#
+# File: explorer.php, line: 410
+msgid "Patient ID"
+msgstr "ID del paciente"
+
+#
+# File: explorer.php, line: 412
+msgid "Patient Name"
+msgstr "Nombre del paciente"
+
+#
+# File: explorer.php, line: 414
+msgid "Accession Number"
+msgstr "Número de Control"
+
+#
+# File: explorer.php, line: 416
+msgid "Study Description"
+msgstr "Descripción del estudio"
+
+#
+# File: explorer.php, line: 419
+msgid "Value for this field:"
+msgstr "Valor para este campo:"
+
+#
+# File: explorer.php, line: 421
+msgid "Study date:"
+msgstr "Fecha del Estudio:"
+
+#
+# File: explorer.php, line: 426
+msgid "Modalities:"
+msgstr "Modalidades:"
+
+#
+# File: explorer.php, line: 443
+msgid "Test Echo"
+msgstr "Test de eco"
+
+#
+# File: explorer.php, line: 445
+msgid "Search studies"
+msgstr "Estudios de búsqueda"
+
+#
+# File: explorer.php, line: 488
+msgid "Target AET:"
+msgstr "AET de Destino:"
+
+#
+# File: explorer.php, line: 493
+msgid "Retrieve"
+msgstr "Recuperar"
+
+#
+# File: explorer.php, line: 513
+msgid "Job"
+msgstr "Tarea"
+
+#
+# File: explorer.php, line: 525
+msgid "Cancel job"
+msgstr "Cancelar tarea"
+
+#
+# File: explorer.php, line: 526
+msgid "Resubmit job"
+msgstr "Reenviar tarea"
+
+#
+# File: explorer.php, line: 527
+msgid "Pause job"
+msgstr "Pausar tarea"
+
+#
+# File: explorer.php, line: 528
+msgid "Resume job"
+msgstr "Reanudar tarea"
+
+#
+# File: explorer.php, line: 534
+msgid "Sending to Orthanc peer..."
+msgstr "Enviando al compañero Orthanc ..."
+
+#
+# File: explorer.php, line: 538
+msgid "Sending to DICOM modality..."
+msgstr "Envío a la modalidad DICOM..."
+
+#
+# File: explorer.php, line: 542
+msgid "Retrieving images from DICOM modality..."
+msgstr "Obteniendo imágenes desde la modaliad DICOM..."
+
+#
+# File: explorer.php, line: 548
+msgid "Insecure setup"
+msgstr "Configuración insegura"
+
+#
+# File: explorer.php, line: 549
+msgid "Your Orthanc server is accepting remote connections, but isusing the default username and password, or has userauthentication explicitly turned off. Please carefully readyour logs and review your configuration, especially options"
+msgstr "Su servidor Orthanc acepta conexiones remotas, pero está usando el nombre de usuario y contraseña predeterminados, o tiene la autenticación de uso desactivada explícitamente. Por favor, prepare cuidadosamente sus registros y revise su configuración, especialmente las opciones"
+
+#
+# File: explorer.php, line: 550
+msgid "and"
+msgstr "y"
+
+#
+# File: explorer.php, line: 928
+msgid "Status: "
+msgstr "Estado: "
+
+#
+# File: explorer.php, line: 331
+msgid "Instance: "
+msgstr "Instancia:"
+
+#
+# File: explorer.php, line: 421
+msgid "Any date"
+msgstr "Cualquier fecha"
+
+#
+# File: explorer.php, line: 993
+# File: explorer.php, line: 2174
+msgid "Today"
+msgstr "Hoy"
+
+#
+# File: explorer.php, line: 994
+# File: explorer.php, line: 2175
+msgid "Yesterday"
+msgstr "Ayer"
+
+#
+# File: explorer.php, line: 995
+# File: explorer.php, line: 2176
+msgid "Last 7 days"
+msgstr "Últimos 7 días"
+
+#
+# File: explorer.php, line: 996
+# File: explorer.php, line: 2177
+msgid "Last 31 days"
+msgstr "Últimos 31 días"
+
+#
+# File: explorer.php, line: 997
+# File: explorer.php, line: 2178
+msgid "Last 3 months"
+msgstr "Últimos 3 meses"
+
+#
+# File: explorer.php, line: 998
+# File: explorer.php, line: 2179
+msgid "Last year"
+msgstr "El año pasado"
+
+#
+# File: explorer.php, line: 1046
+msgid "Error during lookup"
+msgstr "Error durante la búsqueda"
+
+#
+# File: explorer.php, line: 1499
+# File: explorer.php, line: 1822
+# File: explorer.php, line: 2205
+msgid "OK"
+msgstr "OK"
+
+#
+# File: explorer.php, line: 525
+msgid "Cancel"
+msgstr "Cancelar"
+
+#
+# File: explorer.php, line: 348
+msgid "Delete this instance?"
+msgstr "¿Eliminar esta instancia?"
+
+#
+# File: explorer.php, line: 257
+msgid "Delete this study?"
+msgstr "¿Eliminar este estudio?"
+
+#
+# File: explorer.php, line: 301
+msgid "Delete this series?"
+msgstr "¿Eliminar esta serie?"
+
+#
+# File: explorer.php, line: 212
+msgid "Delete this patient?"
+msgstr "¿Eliminar a este paciente?"
+
+#
+# File: explorer.php, line: 426
+msgid "DICOM modalities"
+msgstr "Modalidades:"
+
+#
+# File: explorer.php, line: 534
+msgid "Orthanc peers"
+msgstr "Compañero Orthanc ..."
+
+#
+# File: explorer.php, line: 1694
+msgid "Choose target"
+msgstr "Elija el destino"
+
+#
+# File: explorer.php, line: 1750
+msgid "Error during store"
+msgstr "Error al guardar"
+
+#
+# File: explorer.php, line: 348
+msgid "Anonymize this instance?"
+msgstr "¿Anonimizar esta instancia?"
+
+#
+# File: explorer.php, line: 257
+msgid "Anonymize this study?"
+msgstr "¿Anonimizar este estudio?"
+
+#
+# File: explorer.php, line: 312
+msgid "Anonymize this series?"
+msgstr "¿Anonimizar esta serie?"
+
+#
+# File: explorer.php, line: 212
+msgid "Anonymize this patient?"
+msgstr "¿Anonimizar a este paciente?"
+
+#
+# File: explorer.php, line: 1964
+msgid "Currently running"
+msgstr "Actualmente en ejecución"
+
+#
+# File: explorer.php, line: 1968
+msgid "Pending jobs"
+msgstr "Trabajos pendientes"
+
+#
+# File: explorer.php, line: 525
+msgid "Inactive jobs"
+msgstr "Cancelar tarea"
+
+#
+# File: explorer.php, line: 1986
+msgid "ID: "
+msgstr "ID:"
+
+#
+# File: explorer.php, line: 1987
+msgid "Local AET: "
+msgstr "AET Local:"
+
+#
+# File: explorer.php, line: 488
+msgid "Remote AET: "
+msgstr "AET de Destino:"
+
+#
+# File: explorer.php, line: 1989
+msgid "Creation time: "
+msgstr "Hora de creación:"
+
+#
+# File: explorer.php, line: 1990
+msgid "Completion time: "
+msgstr "Tiempo de completación:"
+
+#
+# File: explorer.php, line: 1991
+msgid "ETA: "
+msgstr "TEA:"
+
+#
+# File: explorer.php, line: 2035
+msgid "General information about the job"
+msgstr "Información general sobre el trabajo."
+
+#
+# File: explorer.php, line: 2056
+msgid "Detailed information"
+msgstr "Información detallada"
+
+#
+# File: explorer.php, line: 2186
+msgid "Error: The C-Echo has failed!"
+msgstr "Error: ¡El C-Echo ha fallado!"
+
+#
+# File: explorer.php, line: 2194
+msgid "The C-Echo has succeeded!"
+msgstr "¡El C-Echo ha tenido éxito!"
+
+#
+# File: explorer.php, line: 2200
+msgid "Echo result"
+msgstr "Resultado del eco"
+
+#
+# File: explorer.php, line: 2255
+# File: explorer.php, line: 2354
+msgid "Error during query (C-Find)"
+msgstr "Error durante la consulta (C-Find)"
+
+#
+# File: explorer.php, line: 79
+msgid "Accession number: "
+msgstr "Número de acceso:"
+
+#
+# File: explorer.php, line: 421
+msgid "Birth date: "
+msgstr "Fecha de nacimiento:"
+
+#
+# File: explorer.php, line: 76
+msgid "Patient sex: "
+msgstr "Nombre del paciente:"
+
+#
+# File: explorer.php, line: 82
+msgid "Study description: "
+msgstr "Descripción del estudio:"
+
+#
+# File: explorer.php, line: 421
+msgid "Study date: "
+msgstr "Fecha de estudio:"
+
+#
+# File: explorer.php, line: 493
+msgid "Retrieve all study"
+msgstr "Recuperar"
+
+#
+# File: explorer.php, line: 426
+msgid "Modality: "
+msgstr "Modalidades:"
+
+#
+# File: explorer.php, line: 2380
+msgid "Protocol Name: "
+msgstr "Nombre del protocolo:"
+
+#
+# File: explorer.php, line: 2463
+msgid "Error during retrieve"
+msgstr "Error durante la recuperación"
+
+#
+# File: explorer.php, line: 2503
+msgid "Done"
+msgstr "Hecho"
+
+#
+# File: explorer.php, line: 2509
+msgid "Failure"
+msgstr "Rechazo"
+
+#
+# File: explorer.php, line: 64
+# File: explorer.php, line: 116
+# File: explorer.php, line: 139
+# File: explorer.php, line: 195
+# File: explorer.php, line: 246
+# File: explorer.php, line: 290
+# File: explorer.php, line: 337
+msgid "Uploading: "
+msgstr "Cargando:"
