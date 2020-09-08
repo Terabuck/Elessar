@@ -1,11 +1,4 @@
 <?php
-/*
-Author: Javed Ur Rehman
-Website: http://www.allphptricks.com/
-*/
-?>
-
-<?php
 if(isset($_COOKIE["NG_TRANSLATE_LANG_KEY"])) {
     $lang = $_COOKIE["NG_TRANSLATE_LANG_KEY"];
     $directory=dirname(__FILE__)."/locale"; 

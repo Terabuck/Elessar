@@ -4,13 +4,13 @@ include("includes/auth.php");
 ?>
 <div data-role="page" id="lookup">
     <div data-role="header">
-        <h1><?php  echo strtoupper($_SESSION['dbuser']); ?> @ <span
-                class="orthanc-name"></span><?=_('Lookup studies')?></h1>
+        <h1><?php  echo strtoupper($_SESSION['dbuser']); ?> @ <span class="orthanc-name"></span><?=_('Lookup studies')?>
+        </h1>
         <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
             <a href="#" id="logout" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Quit')?></a>
         </div>
         <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
-            <a href="#upload" data-icon="gear" data-role="button"><?=_('Upload')?></a>
+            <a href="#upload" data-icon="arrow-u" data-role="button"><?=_('Upload')?></a>
             <a href="#query-retrieve" data-icon="search" data-role="button"><?=_('Query/Retrieve')?></a>
             <select data-iconpos="left" id="language" onchange="updateLang(this)" data-mini="true">
                 <option value="en_US">🌐</option>
@@ -33,26 +33,41 @@ include("includes/auth.php");
     </div>
     <div data-role="content">
         <div data-role="content" id="content">
-            <p align="center"><a href="http://www.orthanc-server.com/" target="_blank" alt="Orthanc homepage"><img
-                        src="libs/images/orthanc-logo.png" alt="Orthanc" style="width: 80%; max-width: 420px" /></a></p>
+            <p align="center">
+                <a href="http://www.orthanc-server.com/" target="_blank" alt="Orthanc homepage"><img
+                        src="libs/images/orthanc-logo.png" alt="Orthanc" style="width: 80%; max-width: 420px" /></a>
+            </p>
         </div>
         <form data-ajax="false" id="lookup-form">
-            <div data-role="fieldcontain"><label for="lookup-patient-id"><?=_('Patient ID:')?></label><input type="text"
-                    name="lookup-patient-id" id="lookup-patient-id" value="" /></div>
-            <div data-role="fieldcontain"><label for="lookup-patient-name"><?=_('Patient Name:')?></label><input
-                    type="text" name="lookup-patient-name" id="lookup-patient-name" value="" /></div>
-            <div data-role="fieldcontain"><label for="lookup-accession-number"><?=_('Accession Number:')?></label><input
-                    type="text" name="lookup-accession-number" id="lookup-accession-number" value="" /></div>
-            <div data-role="fieldcontain"><label
-                    for="lookup-study-description"><?=_('Study Description:')?></label><input type="text"
-                    name="lookup-study-description" id="lookup-study-description" value="" /></div>
-            <div data-role="fieldcontain"><label for="lookup-study-date"><?=_('Study Date:')?></label><select
-                    name="lookup-study-date" id="lookup-study-date"></select></div>
+            <div data-role="fieldcontain">
+                <label for="lookup-patient-id"><?=_('Patient ID:')?></label>
+                <input type="text" name="lookup-patient-id" id="lookup-patient-id" value="" />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="lookup-patient-name"><?=_('Patient Name:')?></label>
+                <input type="text" name="lookup-patient-name" id="lookup-patient-name" value="" />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="lookup-accession-number"><?=_('Accession Number:')?></label>
+                <input type="text" name="lookup-accession-number" id="lookup-accession-number" value="" />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="lookup-study-description"><?=_('Study Description:')?></label>
+                <input type="text" name="lookup-study-description" id="lookup-study-description" value="" />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="lookup-study-date"><?=_('Study Date:')?></label>
+                <select name="lookup-study-date" id="lookup-study-date"></select>
+            </div>
             <fieldset class="ui-grid-b">
-                <div class="ui-block-a"><a href="#find-patients" data-role="button" data-theme="b"
-                        data-direction="reverse"><?=_('All patients')?></a></div>
-                <div class="ui-block-b"><a href="#find-studies" data-role="button" data-theme="b"
-                        data-direction="reverse"><?=_("All studies")?></a></div>
+                <div class="ui-block-a">
+                    <a href="#find-patients" data-role="button" data-theme="b"
+                        data-direction="reverse"><?=_('All patients')?></a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#find-studies" data-role="button" data-theme="b"
+                        data-direction="reverse"><?=_("All studies")?></a>
+                </div>
                 <div class="ui-block-c"><button id="lookup-submit" type="submit"
                         data-theme="e"><?=_('Do lookup')?></button></div>
             </fieldset>
@@ -73,14 +88,13 @@ include("includes/auth.php");
 <div data-role="page" id="find-patients">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('All patients')?></h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a><a href="#plugins" data-icon="grid"
-                data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
         </div>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right"><a href="#upload" data-icon="gear"
-                data-role="button"><?=_('Upload')?></a><a href="#query-retrieve" data-icon="search"
-                data-role="button"><?=_('Query/Retrieve')?></a><a href="#jobs" data-icon="refresh" data-role="button"
-                data-direction="reverse"><?=_('Jobs')?></a></div>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
+            <a href="#upload" data-icon="arrow-u" data-role="button"><?=_('Upload')?></a>
+            <a href="#query-retrieve" data-icon="search" data-role="button"><?=_('Query/Retrieve')?></a>
+        </div>
     </div>
     <div data-role="content">
         <div id="alert-patients">
@@ -96,14 +110,13 @@ include("includes/auth.php");
 <div data-role="page" id="find-studies">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('All studies')?></h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a><a href="#plugins" data-icon="grid"
-                data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
         </div>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right"><a href="#upload" data-icon="gear"
-                data-role="button"><?=_('Upload')?></a><a href="#query-retrieve" data-icon="search"
-                data-role="button"><?=_('Query/Retrieve')?></a><a href="#jobs" data-icon="refresh" data-role="button"
-                data-direction="reverse"><?=_('Jobs')?></a></div>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
+            <a href="#upload" data-icon="arrow-u" data-role="button"><?=_('Upload')?></a>
+            <a href="#query-retrieve" data-icon="search" data-role="button"><?=_('Query/Retrieve')?></a>
+        </div>
     </div>
     <div data-role="content">
         <div id="alert-studies">
@@ -119,8 +132,8 @@ include("includes/auth.php");
 <div data-role="page" id="upload">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('Upload DICOM files')?></h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
         </div>
         <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
             <a href="#plugins" data-icon="grid" data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
@@ -128,20 +141,24 @@ include("includes/auth.php");
         </div>
     </div>
     <div data-role="content">
-        <div><input id="fileupload" type="file" name="files[]" data-url="../instances/" style="display:none" multiple>
+        <div>
+            <input id="fileupload" type="file" name="files[]" data-url="../instances/" style="display:none" multiple>
         </div>
         <p>
-            <ul data-role="listview" data-inset="true">
-                <li id="fileupload-proxy" onclick="$('#fileupload').click()" data-icon="arrow-r" data-theme="e"><a
-                        href="#"><?=_('Select files to upload ...')?></a></li>
-                <li data-icon="arrow-r" data-theme="e"><a href="#" id="upload-button"><?=_('Start the upload')?></a>
-                </li>
-                <li data-icon="delete" data-theme="d"><a href="#"
-                        id="upload-clear"><?=_('Clear the pending uploads')?></a></li>
-            </ul>
-            <div id="progress" class="ui-corner-all"><span class="bar ui-corner-all"></span>
-                <div class="label"></div>
-            </div>
+        <ul data-role="listview" data-inset="true">
+            <li id="fileupload-proxy" onclick="$('#fileupload').click()" data-icon="arrow-r" data-theme="e">
+                <a href="#"><?=_('Select files to upload ...')?></a>
+            </li>
+            <li data-icon="arrow-r" data-theme="e">
+                <a href="#" id="upload-button"><?=_('Start the upload')?></a>
+            </li>
+            <li data-icon="delete" data-theme="d">
+                <a href="#" id="upload-clear"><?=_('Clear the pending uploads')?></a>
+            </li>
+        </ul>
+        <div id="progress" class="ui-corner-all"><span class="bar ui-corner-all"></span>
+            <div class="label"></div>
+        </div>
         </p>
         <div class="ui-bar ui-bar-e" id="issue-21-warning">
             <h3><?=_('Warning:')?></h3>
@@ -156,42 +173,55 @@ include("includes/auth.php");
 <div data-role="page" id="patient">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('Patient')?></h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a><a href="#plugins" data-icon="grid"
-                data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
         </div>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right"><a href="#upload" data-icon="gear"
-                data-role="button"><?=_('Upload')?></a><a href="#query-retrieve" data-icon="search"
-                data-role="button"><?=_('Query/Retrieve')?></a><a href="#jobs" data-icon="refresh" data-role="button"
-                data-direction="reverse"><?=_('Jobs')?></a></div>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
+            <a href="#upload" data-icon="arrow-u" data-role="button"><?=_('Upload')?></a>
+            <a href="#query-retrieve" data-icon="search" data-role="button"><?=_('Query/Retrieve')?></a>
+        </div>
     </div>
     <div data-role="content">
         <div class="ui-grid-a">
             <div class="ui-block-a">
                 <ul data-role="listview" data-inset="true" data-theme="a" id="patient-info"></ul>
                 <p>
-                    <div class="switch-container"><select name="protection" id="protection" data-role="slider">
-                            <option value="off"><?=_('Unprotected')?></option>
-                            <option value="on"><?=_('Protected')?></option>
-                        </select></div>
+                <div class="switch-container">
+                    <select name="protection" id="protection" data-role="slider">
+                        <option value="off"><?=_('Unprotected')?></option>
+                        <option value="on"><?=_('Protected')?></option>
+                    </select>
+                </div>
                 </p>
                 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c">
                     <li data-role="list-divider"><?=_('Interact')?></li>
-                    <li data-icon="arrow-u"><a href="#" id="upload-picture"><?=_('Add JPG image')?></a></li>
-                    <li data-icon="delete"><a href="#" id="patient-delete"><?=_('Delete this patient')?></a>
+                    <li data-icon="arrow-u">
+                        <a href="#" id="upload-picture"><?=_('Add JPG image')?></a>
                     </li>
-                    <li data-icon="forward"><a href="#" id="patient-store"><?=_('Send to remote modality')?></a>
+                    <li data-icon="delete">
+                        <a href="#" id="patient-delete"><?=_('Delete this patient')?></a>
                     </li>
-                    <li data-icon="star"><a href="#" id="patient-anonymize"><?=_('Anonymize')?></a></li>
+                    <li data-icon="forward">
+                        <a href="#" id="patient-store"><?=_('Send to remote modality')?></a>
+                    </li>
+                    <li data-icon="star">
+                        <a href="#" id="patient-anonymize"><?=_('Anonymize')?></a>
+                    </li>
                 </ul>
                 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c">
                     <li data-role="list-divider"><?=_('Access')?></li>
-                    <li data-icon="info" data-theme="e" style="display:none"><a href="#"
-                            id="patient-anonymized-from"><?=_('Before anonymization')?></a></li>
-                    <li data-icon="info" data-theme="e" style="display:none"><a href="#"
-                            id="patient-modified-from"><?=_('Before modification')?></a></li>
-                    <li data-icon="gear"><a href="#" id="patient-archive"><?=_('Download ZIP')?></a></li>
-                    <li data-icon="gear"><a href="#" id="patient-media"><?=_('Download DICOMDIR')?></a></li>
+                    <li data-icon="info" data-theme="e" style="display:none">
+                        <a href="#" id="patient-anonymized-from"><?=_('Before anonymization')?></a>
+                    </li>
+                    <li data-icon="info" data-theme="e" style="display:none">
+                        <a href="#" id="patient-modified-from"><?=_('Before modification')?></a>
+                    </li>
+                    <li data-icon="gear">
+                        <a href="#" id="patient-archive"><?=_('Download ZIP')?></a>
+                    </li>
+                    <li data-icon="gear">
+                        <a href="#" id="patient-media"><?=_('Download DICOMDIR')?></a>
+                    </li>
                 </ul>
             </div>
             <div class="ui-block-b">
@@ -202,16 +232,17 @@ include("includes/auth.php");
 </div>
 <div data-role="page" id="study">
     <div data-role="header">
-        <h1><span class="orthanc-name"></span><a href="#" class="patient-link"><?=_('Patient')?></a>&raquo;
-            <?=_('Study')?></h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a><a href="#plugins" data-icon="grid"
-                data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+        <h1><span class="orthanc-name"></span>
+            <a href="#" class="patient-link"><?=_('Patient')?></a>&raquo;
+            <?=_('Study')?>
+        </h1>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
         </div>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right"><a href="#upload" data-icon="gear"
-                data-role="button"><?=_('Upload')?></a><a href="#query-retrieve" data-icon="search"
-                data-role="button"><?=_('Query/Retrieve')?></a><a href="#jobs" data-icon="refresh" data-role="button"
-                data-direction="reverse"><?=_('Jobs')?></a></div>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
+            <a href="#upload" data-icon="arrow-u" data-role="button"><?=_('Upload')?></a>
+            <a href="#query-retrieve" data-icon="search" data-role="button"><?=_('Query/Retrieve')?></a>
+        </div>
     </div>
     <div data-role="content">
         <div class="ui-grid-a">
@@ -219,21 +250,36 @@ include("includes/auth.php");
                 <ul data-role="listview" data-inset="true" data-theme="a" id="study-info"></ul>
                 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c">
                     <li data-role="list-divider"><?=_('Interact')?></li>
-                    <li data-icon="plus"><a href="#" id="upload-report"><?=_('Append PDF report')?></a></li>
-                    <li data-icon="arrow-u"><a href="#" id="upload-picture2"><?=_('Add JPG image')?></a></li>
-                    <li data-icon="delete"><a href="#" id="study-delete"><?=_('Delete this study')?></a></li>
-                    <li data-icon="forward"><a href="#" id="study-store"><?=_('Send to DICOM modality')?></a>
+                    <li data-icon="plus">
+                        <a href="#" id="upload-report"><?=_('Append PDF report')?></a>
                     </li>
-                    <li data-icon="star"><a href="#" id="study-anonymize"><?=_('Anonymize')?></a></li>
+                    <li data-icon="arrow-u">
+                        <a href="#" id="upload-picture2"><?=_('Add JPG image')?></a>
+                    </li>
+                    <li data-icon="delete">
+                        <a href="#" id="study-delete"><?=_('Delete this study')?></a>
+                    </li>
+                    <li data-icon="forward">
+                        <a href="#" id="study-store"><?=_('Send to DICOM modality')?></a>
+                    </li>
+                    <li data-icon="star">
+                        <a href="#" id="study-anonymize"><?=_('Anonymize')?></a>
+                    </li>
                 </ul>
                 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c">
                     <li data-role="list-divider"><?=_('Access')?></li>
-                    <li data-icon="info" data-theme="e" style="display:none"><a href="#"
-                            id="study-anonymized-from"><?=_('Before anonymization')?></a></li>
-                    <li data-icon="info" data-theme="e" style="display:none"><a href="#"
-                            id="study-modified-from"><?=_('Before modification')?></a></li>
-                    <li data-icon="gear"><a href="#" id="study-archive"><?=_('Download ZIP')?></a></li>
-                    <li data-icon="gear"><a href="#" id="study-media"><?=_('Download DICOMDIR')?></a></li>
+                    <li data-icon="info" data-theme="e" style="display:none">
+                        <a href="#" id="study-anonymized-from"><?=_('Before anonymization')?></a>
+                    </li>
+                    <li data-icon="info" data-theme="e" style="display:none">
+                        <a href="#" id="study-modified-from"><?=_('Before modification')?></a>
+                    </li>
+                    <li data-icon="gear">
+                        <a href="#" id="study-archive"><?=_('Download ZIP')?></a>
+                    </li>
+                    <li data-icon="gear">
+                        <a href="#" id="study-media"><?=_('Download DICOMDIR')?></a>
+                    </li>
                 </ul>
             </div>
             <div class="ui-block-b">
@@ -244,16 +290,17 @@ include("includes/auth.php");
 </div>
 <div data-role="page" id="series">
     <div data-role="header">
-        <h1><span class="orthanc-name"></span><a href="#" class="patient-link"><?=_('Patient')?></a>&raquo; <a href="#"
-                class="study-link"><?=_('Study')?></a>&raquo; <?=_('Series')?> </h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a><a href="#plugins" data-icon="grid"
-                data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+        <h1><span class="orthanc-name"></span>
+            <a href="#" class="patient-link"><?=_('Patient')?></a>&raquo; <a href="#"
+                class="study-link"><?=_('Study')?></a>&raquo; <?=_('Series')?>
+        </h1>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a></a>
         </div>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right"><a href="#upload" data-icon="gear"
-                data-role="button"><?=_('Upload')?></a><a href="#query-retrieve" data-icon="search"
-                data-role="button"><?=_('Query/Retrieve')?></a><a href="#jobs" data-icon="refresh" data-role="button"
-                data-direction="reverse"><?=_('Jobs')?></a></div>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
+            <a href="#upload" data-icon="arrow-u" data-role="button"><?=_('Upload')?></a>
+            <a href="#query-retrieve" data-icon="search" data-role="button"><?=_('Query/Retrieve')?></a>
+        </div>
     </div>
     <div data-role="content">
         <div class="ui-grid-a">
@@ -261,21 +308,33 @@ include("includes/auth.php");
                 <ul data-role="listview" data-inset="true" data-theme="a" id="series-info"></ul>
                 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c">
                     <li data-role="list-divider"><?=_('Interact')?></li>
-                    <li data-icon="delete"><a href="#" id="series-delete"><?=_('Delete this series')?></a></li>
-                    <li data-icon="forward"><a href="#" id="series-store"><?=_('Send to DICOM modality')?></a>
+                    <li data-icon="delete">
+                        <a href="#" id="series-delete"><?=_('Delete this series')?></a>
                     </li>
-                    <li data-icon="star"><a href="#" id="series-anonymize"><?=_('Anonymize')?></a></li>
+                    <li data-icon="forward">
+                        <a href="#" id="series-store"><?=_('Send to DICOM modality')?></a>
+                    </li>
+                    <li data-icon="star">
+                        <a href="#" id="series-anonymize"><?=_('Anonymize')?></a>
+                    </li>
                 </ul>
                 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c">
                     <li data-role="list-divider"><?=_('Access')?></li>
-                    <li data-icon="info" data-theme="e" style="display:none"><a href="#"
-                            id="series-anonymized-from"><?=_('Before anonymization')?></a></li>
-                    <li data-icon="info" data-theme="e" style="display:none"><a href="#"
-                            id="series-modified-from"><?=_('Before modification')?></a></li>
-                    <li data-icon="search"><a href="#" id="series-preview"><?=_('Preview this series')?></a>
+                    <li data-icon="info" data-theme="e" style="display:none">
+                        <a href="#" id="series-anonymized-from"><?=_('Before anonymization')?></a>
                     </li>
-                    <li data-icon="gear"><a href="#" id="series-archive"><?=_('Download ZIP')?></a></li>
-                    <li data-icon="gear"><a href="#" id="series-media"><?=_('Download DICOMDIR')?></a></li>
+                    <li data-icon="info" data-theme="e" style="display:none">
+                        <a href="#" id="series-modified-from"><?=_('Before modification')?></a>
+                    </li>
+                    <li data-icon="search">
+                        <a href="#" id="series-preview"><?=_('Preview this series')?></a>
+                    </li>
+                    <li data-icon="gear">
+                        <a href="#" id="series-archive"><?=_('Download ZIP')?></a>
+                    </li>
+                    <li data-icon="gear">
+                        <a href="#" id="series-media"><?=_('Download DICOMDIR')?></a>
+                    </li>
                 </ul>
             </div>
             <div class="ui-block-b">
@@ -286,17 +345,18 @@ include("includes/auth.php");
 </div>
 <div data-role="page" id="instance">
     <div data-role="header">
-        <h1><span class="orthanc-name"></span><a href="#" class="patient-link"><?=_('Patient')?></a>&raquo; <a href="#"
+        <h1><span class="orthanc-name"></span>
+            <a href="#" class="patient-link"><?=_('Patient')?></a>&raquo; <a href="#"
                 class="study-link"><?=_('Study')?></a>&raquo; <a href="#"
-                class="series-link"><?=_('Series')?></a>&raquo; <?=_('Instance')?> </h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a><a href="#plugins" data-icon="grid"
-                data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+                class="series-link"><?=_('Series')?></a>&raquo; <?=_('Instance')?>
+        </h1>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
         </div>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right"><a href="#upload" data-icon="gear"
-                data-role="button"><?=_('Upload')?></a><a href="#query-retrieve" data-icon="search"
-                data-role="button"><?=_('Query/Retrieve')?></a><a href="#jobs" data-icon="refresh" data-role="button"
-                data-direction="reverse"><?=_('Jobs')?></a></div>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
+            <a href="#upload" data-icon="arrow-u" data-role="button"><?=_('Upload')?></a>
+            <a href="#query-retrieve" data-icon="search" data-role="button"><?=_('Query/Retrieve')?></a>
+        </div>
     </div>
     <div data-role="content">
         <div class="ui-grid-a">
@@ -304,30 +364,38 @@ include("includes/auth.php");
                 <ul data-role="listview" data-inset="true" data-theme="a" id="instance-info"></ul>
                 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c">
                     <li data-role="list-divider"><?=_('Interact')?></li>
-                    <li data-icon="delete"><a href="#" id="instance-delete"><?=_('Delete this instance')?></a>
+                    <li data-icon="delete">
+                        <a href="#" id="instance-delete"><?=_('Delete this instance')?></a>
                     </li>
-                    <li data-icon="forward"><a href="#" id="instance-store"><?=_('Send to DICOM modality')?></a>
+                    <li data-icon="forward">
+                        <a href="#" id="instance-store"><?=_('Send to DICOM modality')?></a>
                     </li>
                 </ul>
                 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c">
                     <li data-role="list-divider"><?=_('Access')?></li>
-                    <li data-icon="info" data-theme="e" style="display:none"><a href="#"
-                            id="instance-anonymized-from"><?=_('Before anonymization')?></a></li>
-                    <li data-icon="info" data-theme="e" style="display:none"><a href="#"
-                            id="instance-modified-from"><?=_('Before modification')?></a></li>
-                    <li data-icon="arrow-d"><a href="#"
-                            id="instance-download-dicom"><?=_('Download the DICOM file')?></a></li>
-                    <li data-icon="arrow-d"><a href="#" id="instance-download-json"><?=_('Download the JSON file')?></a>
+                    <li data-icon="info" data-theme="e" style="display:none">
+                        <a href="#" id="instance-anonymized-from"><?=_('Before anonymization')?></a>
                     </li>
-                    <li data-icon="search"><a href="#" id="instance-preview"><?=_('Preview the instance')?></a>
+                    <li data-icon="info" data-theme="e" style="display:none">
+                        <a href="#" id="instance-modified-from"><?=_('Before modification')?></a>
+                    </li>
+                    <li data-icon="arrow-d">
+                        <a href="#" id="instance-download-dicom"><?=_('Download the DICOM file')?></a>
+                    </li>
+                    <li data-icon="arrow-d">
+                        <a href="#" id="instance-download-json"><?=_('Download the JSON file')?></a>
+                    </li>
+                    <li data-icon="search">
+                        <a href="#" id="instance-preview"><?=_('Preview the instance')?></a>
                     </li>
                 </ul>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-b">
                     <h1><?=_('DICOM Tags')?></h1>
-                    <p align="right"><input type="checkbox" id="show-tag-name" checked="checked" class="custom"
-                            data-mini="true" /><label for="show-tag-name"><?=_('Show tag description')?></label>
+                    <p align="right">
+                        <input type="checkbox" id="show-tag-name" checked="checked" class="custom" data-mini="true" />
+                        <label for="show-tag-name"><?=_('Show tag description')?></label>
                     </p>
                     <div id="dicom-tree"></div>
                 </div>
@@ -338,8 +406,8 @@ include("includes/auth.php");
 <div data-role="page" id="plugins">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('Plugins')?></h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
         </div>
         <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
             <a href="#jobs" data-icon="refresh" data-role="button" data-direction="reverse"><?=_('Jobs')?></a>
@@ -352,8 +420,8 @@ include("includes/auth.php");
 <div data-role="page" id="query-retrieve">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('DICOM Query/Retrieve')?> (1/4)</h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
         </div>
         <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
             <a href="#plugins" data-icon="grid" data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
@@ -362,39 +430,55 @@ include("includes/auth.php");
     </div>
     <div data-role="content">
         <form data-ajax="false">
-            <div data-role="fieldcontain"><label for="qr-server"><?=_('DICOM server:')?></label><select name="qr-server"
-                    id="qr-server"></select></div>
+            <div data-role="fieldcontain">
+                <label for="qr-server"><?=_('DICOM server:')?></label>
+                <select name="qr-server" id="qr-server"></select>
+            </div>
             <div data-role="fieldcontain" id="qr-fields">
                 <fieldset data-role="controlgroup">
-                    <legend><?=_('Field of interest:')?></legend><input type="radio" name="qr-field" id="qr-patient-id"
-                        value="PatientID" checked="checked" /><label
-                        for="qr-patient-id"><?=_('Patient ID')?></label><input type="radio" name="qr-field"
-                        id="qr-patient-name" value="PatientName" /><label
-                        for="qr-patient-name"><?=_('Patient Name')?></label><input type="radio" name="qr-field"
-                        id="qr-accession-number" value="AccessionNumber" /><label
-                        for="qr-accession-number"><?=_('Accession Number')?></label><input type="radio" name="qr-field"
-                        id="qr-study-description" value="StudyDescription" /><label
-                        for="qr-study-description"><?=_('Study Description')?></label>
+                    <legend><?=_('Field of interest:')?></legend>
+                    <input type="radio" name="qr-field" id="qr-patient-id" value="PatientID" checked="checked" />
+                    <label for="qr-patient-id"><?=_('Patient ID')?></label>
+                    <input type="radio" name="qr-field" id="qr-patient-name" value="PatientName" />
+                    <label for="qr-patient-name"><?=_('Patient Name')?></label>
+                    <input type="radio" name="qr-field" id="qr-accession-number" value="AccessionNumber" />
+                    <label for="qr-accession-number"><?=_('Accession Number')?></label>
+                    <input type="radio" name="qr-field" id="qr-study-description" value="StudyDescription" />
+                    <label for="qr-study-description"><?=_('Study Description')?></label>
                 </fieldset>
             </div>
-            <div data-role="fieldcontain"><label for="qr-value"><?=_('Value for this field:')?></label><input
-                    type="text" name="qr-value" id="qr-value" value="*" /></div>
-            <div data-role="fieldcontain"><label for="qr-date"><?=_('Study date:')?></label><select name="qr-date"
-                    id="qr-date"></select></div>
+            <div data-role="fieldcontain">
+                <label for="qr-value"><?=_('Value for this field:')?></label>
+                <input type="text" name="qr-value" id="qr-value" value="*" />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="qr-date"><?=_('Study date:')?></label>
+                <select name="qr-date" id="qr-date"></select>
+            </div>
             <div data-role="fieldcontain" id="qr-modalities">
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-type="horizontal">
-                        <legend><?=_('Modalities:')?></legend><input type="checkbox" name="CR" id="qr-cr"
-                            class="custom" /><label for="qr-cr">CR</label><input type="checkbox" name="CT" id="qr-ct"
-                            class="custom" /><label for="qr-ct">CT</label><input type="checkbox" name="MR" id="qr-mr"
-                            class="custom" /><label for="qr-mr">MR</label><input type="checkbox" name="NM" id="qr-nm"
-                            class="custom" /><label for="qr-nm">NM</label><input type="checkbox" name="PT" id="qr-pt"
-                            class="custom" /><label for="qr-pt">PT</label><input type="checkbox" name="US" id="qr-us"
-                            class="custom" /><label for="qr-us">US</label><input type="checkbox" name="XA" id="qr-xa"
-                            class="custom" /><label for="qr-xa">XA</label><input type="checkbox" name="DR" id="qr-dr"
-                            class="custom" /><label for="qr-dr">DR</label><input type="checkbox" name="DX" id="qr-dx"
-                            class="custom" /><label for="qr-dx">DX</label><input type="checkbox" name="MG" id="qr-mg"
-                            class="custom" /><label for="qr-mg">MG</label>
+                        <legend><?=_('Modalities:')?></legend>
+                        <input type="checkbox" name="CR" id="qr-cr" class="custom" />
+                        <label for="qr-cr">CR</label>
+                        <input type="checkbox" name="CT" id="qr-ct" class="custom" />
+                        <label for="qr-ct">CT</label>
+                        <input type="checkbox" name="MR" id="qr-mr" class="custom" />
+                        <label for="qr-mr">MR</label>
+                        <input type="checkbox" name="NM" id="qr-nm" class="custom" />
+                        <label for="qr-nm">NM</label>
+                        <input type="checkbox" name="PT" id="qr-pt" class="custom" />
+                        <label for="qr-pt">PT</label>
+                        <input type="checkbox" name="US" id="qr-us" class="custom" />
+                        <label for="qr-us">US</label>
+                        <input type="checkbox" name="XA" id="qr-xa" class="custom" />
+                        <label for="qr-xa">XA</label>
+                        <input type="checkbox" name="DR" id="qr-dr" class="custom" />
+                        <label for="qr-dr">DR</label>
+                        <input type="checkbox" name="DX" id="qr-dx" class="custom" />
+                        <label for="qr-dx">DX</label>
+                        <input type="checkbox" name="MG" id="qr-mg" class="custom" />
+                        <label for="qr-mg">MG</label>
                     </fieldset>
                 </div>
             </div>
@@ -409,10 +493,11 @@ include("includes/auth.php");
 <div data-role="page" id="query-retrieve-2">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('DICOM Query/Retrieve')?> (2/4)</h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a><a href="#plugins" data-icon="grid"
-                data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
-        </div><a href="#query-retrieve" data-icon="search" class="ui-btn-right"
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
+            <a href="#plugins" data-icon="grid" data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+        </div>
+        <a href="#query-retrieve" data-icon="search" class="ui-btn-right"
             data-direction="reverse"><?=_('Query/Retrieve')?></a>
     </div>
     <div data-role="content">
@@ -423,10 +508,11 @@ include("includes/auth.php");
 <div data-role="page" id="query-retrieve-3">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('DICOM Query/Retrieve')?> (3/4)</h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a><a href="#plugins" data-icon="grid"
-                data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
-        </div><a href="#query-retrieve" data-icon="search" class="ui-btn-right"
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
+            <a href="#plugins" data-icon="grid" data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+        </div>
+        <a href="#query-retrieve" data-icon="search" class="ui-btn-right"
             data-direction="reverse"><?=_('Query/Retrieve')?></a>
     </div>
     <div data-role="content">
@@ -436,16 +522,19 @@ include("includes/auth.php");
 <div data-role="page" id="query-retrieve-4">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('DICOM Query/Retrieve')?> (4/4)</h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a><a href="#plugins" data-icon="grid"
-                data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
-        </div><a href="#query-retrieve" data-icon="search" class="ui-btn-right"
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
+            <a href="#plugins" data-icon="grid" data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+        </div>
+        <a href="#query-retrieve" data-icon="search" class="ui-btn-right"
             data-direction="reverse"><?=_('Query/Retrieve')?></a>
     </div>
     <div data-role="content">
         <form data-ajax="false" id="retrieve-form">
-            <div data-role="fieldcontain"><label for="retrieve-target"><?=_('Target AET:')?></label><input type="text"
-                    name="retrieve-target" id="retrieve-target"></input></div>
+            <div data-role="fieldcontain">
+                <label for="retrieve-target"><?=_('Target AET:')?></label>
+                <input type="text" name="retrieve-target" id="retrieve-target"></input>
+            </div>
             <fieldset class="ui-grid-b">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b"><button id="retrieve-submit" type="submit"
@@ -458,8 +547,8 @@ include("includes/auth.php");
 <div data-role="page" id="jobs">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('Jobs')?></h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
         </div>
         <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
             <a href="#plugins" data-icon="grid" data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
@@ -472,12 +561,13 @@ include("includes/auth.php");
 <div data-role="page" id="job">
     <div data-role="header">
         <h1><span class="orthanc-name"></span><?=_('Job')?></h1>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left"><a href="#lookup" data-icon="arrow-r"
-                data-role="button" data-direction="reverse"><?=_('Lookup')?></a><a href="#plugins" data-icon="grid"
-                data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-left">
+            <a href="#lookup" data-icon="arrow-l" data-role="button" data-direction="reverse"><?=_('Lookup')?></a>
         </div>
-        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right"><a href="#jobs" data-icon="refresh"
-                data-role="button" data-direction="reverse"><?=_('Jobs')?></a></div>
+        <div data-type="horizontal" data-role="controlgroup" class="ui-btn-right">
+            <a href="#plugins" data-icon="grid" data-role="button" data-direction="reverse"><?=_('Plugins')?></a>
+            <a href="#jobs" data-icon="refresh" data-role="button" data-direction="reverse"><?=_('Jobs')?></a>
+        </div>
     </div>
     <div data-role="content">
         <ul data-role="listview" data-inset="true" data-filter="true" id="job-info"></ul>
@@ -509,7 +599,8 @@ include("includes/auth.php");
         <h1><?=_('Insecure setup')?></h1>
         <p><?=_('Your Orthanc server is accepting remote connections, but is using the default username and password, or has user authentication explicitly turned off. Please carefully read your logs and review your configuration, especially options')?>
             <tt>RemoteAccessAllowed</tt>,
-            <tt>AuthenticationEnabled</tt>, <?=_('and')?> <tt>RegisteredUsers</tt>. </p>
+            <tt>AuthenticationEnabled</tt>, <?=_('and')?> <tt>RegisteredUsers</tt>.
+        </p>
     </div>
 </div>
 <?php
@@ -518,7 +609,6 @@ include("includes/footer.php");
 <script>
 // * new function added to original Orthanc's STARTS here *
 function updateLang() {
-
     var e = document.getElementById("language");
     var cookieValue = e.options[e.selectedIndex].value;
     // write the cookie and reload the explorer
@@ -540,11 +630,9 @@ if ($.browser.msie) {
 var LIMIT_RESOURCES = 100;
 var currentPage = '';
 var currentUuid = '';
-
 function DeepCopy(obj) {
     return jQuery.extend(true, {}, obj);
 }
-
 function ChangePage(page, options) {
     var first = true;
     var value;
@@ -566,7 +654,6 @@ function ChangePage(page, options) {
       changeHash: true
     });*/
 }
-
 function Refresh() {
     if (currentPage == 'patient')
         RefreshPatient();
@@ -604,7 +691,6 @@ $(document).ready(function() {
         Refresh();
     }
 });
-
 function GetAuthorizationTokensFromUrl() {
     var urlVariables = window.location.search.substring(1).split('&');
     var dict = {};
@@ -623,12 +709,10 @@ as the "token" header in every request to the API allowing you to use the author
 $.ajaxSetup({
     headers: authorizationTokens
 });
-
 function SplitLongUid(s) {
     return '<span>' + s.substr(0, s.length / 2) + '</span> <span>' + s.substr(s.length / 2, s.length - s.length /
         2) + '</span>';
 }
-
 function ParseDicomDate(s) {
     y = parseInt(s.substr(0, 4), 10);
     m = parseInt(s.substr(4, 2), 10) - 1;
@@ -644,7 +728,6 @@ function ParseDicomDate(s) {
     }
     return new Date(y, m, d);
 }
-
 function FormatDicomDate(s) {
     if (s == undefined)
         return "No date";
@@ -654,7 +737,6 @@ function FormatDicomDate(s) {
     else
         return d.toString('dddd, MMMM d, yyyy');
 }
-
 function Sort(arr, fieldExtractor, isInteger, reverse) {
     var defaultValue;
     if (isInteger)
@@ -687,13 +769,11 @@ function Sort(arr, fieldExtractor, isInteger, reverse) {
             return order;
     });
 }
-
 function SortOnDicomTag(arr, tag, isInteger, reverse) {
     return Sort(arr, function(a) {
         return a.MainDicomTags[tag];
     }, isInteger, reverse);
 }
-
 function GetResource(uri, callback) {
     $.ajax({
         url: '..' + uri,
@@ -705,7 +785,6 @@ function GetResource(uri, callback) {
         }
     });
 }
-
 function CompleteFormatting(node, link, isReverse, count) {
     if (count != null) {
         node = node.add($('<span>')
@@ -722,7 +801,6 @@ function CompleteFormatting(node, link, isReverse, count) {
         node.attr('data-icon', 'back');
     return node;
 }
-
 function FormatMainDicomTags(target, tags, tagsToIgnore) {
     var v;
     for (var i in tags) {
@@ -742,7 +820,6 @@ function FormatMainDicomTags(target, tags, tagsToIgnore) {
         }
     }
 }
-
 function FormatPatient(patient, link, isReverse) {
     var node = $('<div>').append($('<h3>').text(patient.MainDicomTags.PatientName));
     FormatMainDicomTags(node, patient.MainDicomTags, [
@@ -751,7 +828,6 @@ function FormatPatient(patient, link, isReverse) {
     ]);
     return CompleteFormatting(node, link, isReverse, patient.Studies.length);
 }
-
 function FormatStudy(study, link, isReverse, includePatient) {
     var label;
     var node;
@@ -772,7 +848,6 @@ function FormatStudy(study, link, isReverse, includePatient) {
     ]);
     return CompleteFormatting(node, link, isReverse, study.Series.length);
 }
-
 function FormatSeries(series, link, isReverse) {
     var c;
     var node;
@@ -797,7 +872,6 @@ function FormatSeries(series, link, isReverse) {
     ]);
     return CompleteFormatting(node, link, isReverse, c);
 }
-
 function FormatInstance(instance, link, isReverse) {
     var node = $('<div>').append($('<h3>').text('<?=_("Instance: ")?>' + instance.IndexInSeries));
     FormatMainDicomTags(node, instance.MainDicomTags, [
@@ -917,7 +991,6 @@ $('#find-patients').live('pagebeforeshow', function() {
         }
     });
 });
-
 function FormatListOfStudies(targetId, alertId, countId, studies) {
     var target = $(targetId);
     var patient, study, s;
@@ -965,7 +1038,6 @@ $('#find-studies').live('pagebeforeshow', function() {
         FormatListOfStudies('#all-studies', '#alert-studies', '#count-studies', studies);
     });
 });
-
 function SetupAnonymizedOrModifiedFrom(buttonSelector, resource, resourceType, field) {
     if (field in resource) {
         $(buttonSelector).closest('li').show();
@@ -977,7 +1049,6 @@ function SetupAnonymizedOrModifiedFrom(buttonSelector, resource, resourceType, f
         $(buttonSelector).closest('li').hide();
     }
 }
-
 function RefreshPatient() {
     var pageData, target, v;
     if ($.mobile.pageData) {
@@ -1024,7 +1095,6 @@ function RefreshPatient() {
         });
     }
 }
-
 function RefreshStudy() {
     var pageData, target;
     if ($.mobile.pageData) {
@@ -1066,7 +1136,6 @@ function RefreshStudy() {
         });
     }
 }
-
 function RefreshSeries() {
     var pageData, target;
     if ($.mobile.pageData) {
@@ -1118,7 +1187,6 @@ function RefreshSeries() {
         });
     }
 }
-
 function EscapeHtml(value) {
     var ENTITY_MAP = {
         '&': '&amp;',
@@ -1134,7 +1202,6 @@ function EscapeHtml(value) {
         return ENTITY_MAP[s];
     });
 }
-
 function ConvertForTree(dicom) {
     var result = [];
     var label, c;
@@ -1175,7 +1242,6 @@ function ConvertForTree(dicom) {
     }
     return result;
 }
-
 function RefreshInstance() {
     var pageData;
     if ($.mobile.pageData) {
@@ -1272,7 +1338,6 @@ function OpenLogoutDialog(title) {
 $('#logout').live('click', function() {
     OpenLogoutDialog('<?=_("¿Do you want to leave the DICOM Explorer?")?>');
 });
-
 function OpenUploadReportDialog(path) {
     document.location.href = "libs/php/pdf2orthanc.php?" + path
     // window.open("libs/php/pdf2orthanc.php?" + path, "", "width=340,height=440")
@@ -1281,7 +1346,6 @@ function OpenUploadReportDialog(path) {
 $('#upload-report').live('click', function() {
     OpenUploadReportDialog($.mobile.pageData.uuid);
 });
-
 function OpenUploadImageDialog(path) {
     document.location.href = "libs/php/img2orthanc.php?" + path
     //  window.location = "https://misimagenes.online/ngl/app/img2orthanc.php?" + path;
@@ -1289,7 +1353,6 @@ function OpenUploadImageDialog(path) {
 $('#upload-picture').live('click', function() {
     OpenUploadImageDialog('patient=' + $.mobile.pageData.uuid);
 });
-
 function OpenUploadImageSDialog(path) {
     document.location.href = "libs/php/img2orthanc.php?" + path
     //  window.location = "https://misimagenes.online/ngl/app/img2orthanc.php?" + path;
@@ -1313,7 +1376,6 @@ function DeleteResource(path) {
         }
     });
 }
-
 function OpenDeleteResourceDialog(path, title) {
     $(document).simpledialog2({
         // http://dev.jtsage.com/jQM-SimpleDialog/demos2/
@@ -1429,7 +1491,6 @@ $('#series-preview').live('click', function(e) {
         });
     }
 });
-
 function ChooseDicomModality(callback) {
     var clickedModality = '';
     var clickedPeer = '';
@@ -1492,7 +1553,6 @@ function ChooseDicomModality(callback) {
                         blankContent: items,
                         callbackClose: function() {
                             var timer;
-
                             function WaitForDialogToClose() {
                                 if (!$('#dialog').is(':visible')) {
                                     clearInterval(timer);
@@ -1583,7 +1643,6 @@ $('#protection').live('change', function(e) {
         async: false
     });
 });
-
 function OpenAnonymizeResourceDialog(path, title) {
     $(document).simpledialog2({
         mode: 'button',
@@ -1673,7 +1732,6 @@ $('#plugins').live('pagebeforeshow', function() {
         }
     });
 });
-
 function ParseJobTime(s) {
     var t = (s.substr(0, 4) + '-' +
         s.substr(4, 2) + '-' +
@@ -1684,7 +1742,6 @@ function ParseJobTime(s) {
     // Convert from UTC to local time
     return new Date(utc.getTime() - utc.getTimezoneOffset() * 60000);
 }
-
 function AddJobField(target, description, field) {
     if (!(typeof field === 'undefined')) {
         target.append($('<p>')
@@ -1692,7 +1749,6 @@ function AddJobField(target, description, field) {
             .append($('<strong>').text(field)));
     }
 }
-
 function AddJobDateField(target, description, field) {
     if (!(typeof field === 'undefined')) {
         target.append($('<p>')
@@ -1817,7 +1873,6 @@ $('#job').live('pagebeforeshow', function() {
         });
     }
 });
-
 function TriggerJobAction(action) {
     $.ajax({
         url: '../jobs/' + $.mobile.pageData.uuid + '/' + action,
@@ -1847,7 +1902,6 @@ function JavascriptDateToDicom(date) {
     var s = date.toISOString();
     return s.substring(0, 4) + s.substring(5, 7) + s.substring(8, 10);
 }
-
 function GenerateDicomDate(days) {
     var today = new Date();
     var other = new Date(today);
@@ -2211,7 +2265,6 @@ $(document).ready(function() {
                 .css('background-color', 'green');
         });
 });
-
 function appendFilesToUploadList(files) {
     var target = $('#upload-list');
     $.each(files, function(index, file) {
@@ -2222,7 +2275,6 @@ function appendFilesToUploadList(files) {
 $('#fileupload').live('change', function(e) {
     appendFilesToUploadList(e.target.files);
 })
-
 function ClearUploadProgress() {
     $('#progress .label').text('');
     $('#progress .bar').css('width', '0%').css('background-color', '#333');

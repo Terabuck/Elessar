@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link rel='icon' href="libs/images/favicon.ico" type="image/ico">
+    <link rel='icon' href='libs/images/favicon.ico' type='image/ico'>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Orthanc Explorer</title>
@@ -15,5 +14,4 @@
     <link rel="stylesheet" href="libs/styles/explorer.css" />
     <link rel="stylesheet" href="libs/styles/login.app.css">    
 </head>
-
 <body>

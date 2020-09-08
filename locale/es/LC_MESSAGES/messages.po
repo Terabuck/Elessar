@@ -341,7 +341,7 @@ msgstr "Configuración insegura"
 
 #: explorer.php:533
 msgid "Your Orthanc server is accepting remote connections, but is using the default username and password, or has user authentication explicitly turned off. Please carefully read your logs and review your configuration, especially options"
-msgstr "El servidor Orthanc acepta conexiones remotas, pero utiliza el nombre de usuario y la contraseña predeterminados, o tiene la autenticación de usuario desactivada explícitamente. Por favor, lea cuidadosamente sus registros y revise su configuración, especialmente las opciones"
+msgstr "El servidor Orthanc acepta connectiones remotas, pero utiliza el nombre de usuario y la contraseña predeterminados, o tiene la autenticación de usuario desactivada explícitamente. Por favor, lea cuidadosamente sus registros y revise su configuración, especialmente las opciones"
 
 #: explorer.php:535
 msgid "and"

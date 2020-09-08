@@ -8,12 +8,11 @@ if(isset($_COOKIE["NG_TRANSLATE_LANG_KEY"])) {
     bindtextdomain($domain, $directory); 
     bind_textdomain_codeset($domain, "UTF-8");
 };
+require("includes/localdefs.php");
 session_start();
-
     if(isset($_SESSION['dbuser'])) {
         header('location: index.php');
     }
-
     $error = '';
     
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -23,12 +22,12 @@ session_start();
         $dbpwd = hash('sha512', $dbpwd);
         
         try{
-            $dbconnect = new PDO('mysql:host=localhost;dbname=dicom_login', 'dbusername', 'dbsecret');
-            }catch(PDOException $test_error){
-                echo "Error: " . $test_error->getMessage();
+            $connection = new PDO('mysql:host=localhost;dbname=dicom_login', $connectionUser, $connectionPwd);
+            }catch(PDOException $prueba_error){
+                echo "Error: " . $prueba_error->getMessage();
             }
         
-        $statement = $dbconnect->prepare('
+        $statement = $connection->prepare('
         SELECT * FROM login WHERE dbuser = :dbuser AND dbpwd = :dbpwd'
         );
         

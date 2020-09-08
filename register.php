@@ -8,12 +8,11 @@ if(isset($_COOKIE["NG_TRANSLATE_LANG_KEY"])) {
     bindtextdomain($domain, $directory); 
     bind_textdomain_codeset($domain, "UTF-8");
 };
+require("includes/localdefs.php");
 session_start();
-
     if(isset($_SESSION['dbuser'])) {
         header('location: index.php');
     }
-
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         
         $dbemail = $_POST['dbemail'];
@@ -36,12 +35,12 @@ $msg
 EOT;
         }else{
             try{
-                $dbconnect = new PDO('mysql:host=localhost;dbname=dicom_login', 'dbusername', 'dbsecret');
-            }catch(PDOException $test_error){
-                echo "Error: " . $test_error->getMessage();
+                $connection = new PDO('mysql:host=localhost;dbname=dicom_login', $connectionUser, $connectionPwd);
+            }catch(PDOException $prueba_error){
+                echo "Error: " . $prueba_error->getMessage();
             }
             
-            $statement = $dbconnect->prepare('SELECT * FROM login WHERE dbuser = :dbuser LIMIT 1');
+            $statement = $connection->prepare('SELECT * FROM login WHERE dbuser = :dbuser LIMIT 1');
             $statement->execute(array(':dbuser' => $dbuser));
             $resultado = $statement->fetch();
             
@@ -68,7 +67,7 @@ EOT;
         }
         
         if ($error == ''){
-            $statement = $dbconnect->prepare('INSERT INTO login (id, dbemail, dbuser, dbpwd) VALUES (null, :dbemail, :dbuser, :dbpwd)');
+            $statement = $connection->prepare('INSERT INTO login (id, dbemail, dbuser, dbpwd) VALUES (null, :dbemail, :dbuser, :dbpwd)');
             $statement->execute(array(
                 
                 ':dbemail' => $dbemail,
@@ -86,17 +85,13 @@ EOT;
         }
     }
 
-
-
 require("includes/logreghead.php");
 ?>
-
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="form">
             <div class="welcome-form">
                 <h1><?=_('Access the')?></h1>
                 <h2><?=_('DICOM web')?></h2>
             </div>
-
             <div class="user line-input">
                 <label><img src="libs/images/email.svg" alt="email" style="max-width:1.2rem" /></label>
                 <input type="text" placeholder='<?=_("eMail")?>' name="dbemail">
@@ -114,17 +109,13 @@ require("includes/logreghead.php");
                 <input type="password" placeholder='<?=_("Confirm Password")?>' name="dbpwd2"
                     autocomplete="new-password">
             </div>
-
             <?php if(!empty($error)): ?>
             <div class="mensaje">
                 <?php echo $error; ?>
             </div>
             <?php endif; ?>
-
             <button type="submit"><?=_('Register')?></button>
-
         </form>
 <?php
 require("includes/logregfoot.php");
 ?>
-

@@ -1,7 +1,6 @@
 </div>
 <script>
 function updateLang() {
-
     var e = document.getElementById("language");
     var cookieValue = e.options[e.selectedIndex].value;
     // write the cookie and reload the explorer
@@ -11,5 +10,4 @@ function updateLang() {
 }
 </script>
 </body>
-
 </html>
