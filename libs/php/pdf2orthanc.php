@@ -1,21 +1,25 @@
 <?php
 require("../../includes/auth.php");
+// System variables are defined in the following file:
 require("../../includes/localdefs.php");
+
 // Execute only after file submission
 if (isset($_POST['submit']))
 {
   // Get current actual URL
-  $actualLink = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
-  echo 'Actual Link: '. $actualLink ."<br /> ";
-  
+  $actualLink      = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+  //echo 'Actual Link: ' . $actualLink . "<br /> ";
+
   // Get the study ID from the query param of the calling UR
-  $studyId = parse_url($actualLink, PHP_URL_QUERY);
-  echo 'StudyID: '. $studyId ."<br /> ";
-  
+  $urlQuery  = parse_url($actualLink, PHP_URL_QUERY);
+  //echo 'StudyID: '. $studyId ."<br /> ";
+  $urlBlocks = explode("=", $urlQuery);
+  $PathCode  = $urlBlocks[1];
+  //echo $urlBlocks[0] . " = " . $PathCode . "<br /> ";
   // Get the host and path from the query param of the calling URL
   $getHOST       = parse_url($actualLink, PHP_URL_HOST);
-  echo 'getHost: '.$getHOST."<br /> ";
-  echo 'LocalServer: '.$LocalServer."<br /> ";
+  //echo 'getHost: '.$getHOST."<br /> ";
+  //echo 'LocalServer: '.$LocalServer."<br /> ";
   // Compare calling url to enabled Origin and proceed if correct
   if ($getHOST != $LocalServer)
   {
@@ -23,13 +27,11 @@ if (isset($_POST['submit']))
   }
   else
   {
-    // Create a temporal folder with the studyId
-    $filesPlace = $PublicPath. $studyId;
-    echo 'FilesPlace: '.$filesPlace."<br /> ";
+    // Create a temporal folder with the Code
+    $filesPlace = $PublicPath. $PathCode;
     $cmdMKDIRtemp = 'mkdir -p ' . $filesPlace;
-    echo 'CMDdirTEMP: '.$cmdMKDIRtemp."<br /> ";
     exec($cmdMKDIRtemp);
-    echo 'the temporal folder with the name of the study is: '. $studyId. " <br />";
+    //echo 'the temporal folder with the name of the study is: '. $filesPlace. " <br />";
     // Upload the PDF file
     if (is_uploaded_file($_FILES['pdf']['tmp_name']))
     {
@@ -39,35 +41,42 @@ if (isset($_POST['submit']))
       }
       else
       {
-        echo "<p>The PDF file is properly structured.</p>". " <br />";
+        //echo "<p>The PDF file is properly structured.</p>". " <br />";
         // Saves the PDF in the temporal folder
         define("filesplace", $filesPlace);
         $name                 = $_POST['name'];
         $result               = move_uploaded_file($_FILES['pdf']['tmp_name'], filesplace . "/$name.pdf");
         if ($result == 1)
         {
+          //echo 'Result is 1';
           // Compress the incoming temporal using GhostScript
           $fileInPDF  = $filesPlace . '/temp.pdf';
           $compressedPDF = $filesPlace. '/compressedPDF.pdf';
           $cmdPdfCompress     = 'gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=' . $compressedPDF . ' '. $fileInPDF;
           exec($cmdPdfCompress); 
-          // Prepare the system via REST to extract json from current studyId to get an instanceId
-          $OrthancRESTstudies   = '/studies';
-          $OrthancRESTinstances = '/instances';
-          // Fetch the first instance belonging to the $studyId;
-          $json_string          = $OrthancUrl . $OrthancRESTstudies . "/" . $studyId . $OrthancRESTinstances;
-          echo 'json_string: '.$json_string."<br /> ";
-    
-          $jsondata             = file_get_contents($json_string);
-          echo 'jsondata: '.$jsondata."<br /> ";
-    
-          $obj                  = json_decode($jsondata, true);
-          $obj                  = array_shift($obj);
-          $obj['ID'];
-          $instanceId   = $obj['ID'];
-          $dcmExtension = ".dcm";
-          $dcmTemplate  = $filesPlace . "/" . $instanceId . $dcmExtension;
-          // Open file descriptor
+    // Prepare the system via REST to extract json from current Code to get an instanceId
+    $OrthancRESTpatients  = '/patients';
+    $OrthancRESTstudies   = '/studies';
+    $OrthancRESTinstances = '/instances';
+    if ($urlBlocks[0] === 'study')
+    {
+      $OrthancRESTcode      = $OrthancRESTstudies;
+    }
+    if ($urlBlocks[0] === 'patient')
+    {
+      $OrthancRESTcode      = $OrthancRESTpatients;
+    }
+    // Fetch the first instance belonging to the $PathCode;
+    //echo '$OrthancRESTcode 0 '. $OrthancRESTcode  . " <br />";
+    $json_string          = $OrthancUrl . $OrthancRESTcode . "/" . $PathCode . $OrthancRESTinstances;
+    $jsondata             = file_get_contents($json_string);
+    $obj                  = json_decode($jsondata, true);
+    $obj                  = array_shift($obj);
+    $obj['ID'];
+    $instanceId   = $obj['ID'];
+    $dcmExtension = ".dcm";
+    $dcmTemplate  = $filesPlace . "/" . $instanceId . $dcmExtension;
+    // Open file descriptor
           $fp = fopen($dcmTemplate, 'w+') or die('Process error, please contact the administrator.');
           // Download the instance from Orthanc Dicom Server to local filesystem
           $ch = curl_init($OrthancUrl . $OrthancRESTinstances . "/" . $instanceId . "/file");
@@ -84,14 +93,25 @@ if (isset($_POST['submit']))
           $timeCap    = date('Ymd');
           $tags       = ' -k &quot;StudyDate&quot;=' . $timeCap . ' -k &quot;SeriesDate&quot;=' . $timeCap . ' -k &quot;AcquisitionDate&quot;=' . $timeCap . ' -k &quot;StudyDescription&quot;=Informe -k &quot;Modality&quot;=DOC -k &quot;InstanceNumber&quot;=1 -k &quot;Manufacturer&quot;=&quot;cloud dicomized at misimagenes.online&quot;';
           $cmdFxdTags = htmlspecialchars_decode($tags, ENT_QUOTES);
-          echo "Fecha: " . $timeCap . " <br />";
-          echo "DICOM tags: " . $cmdFxdTags . " <br />";
+          //echo "Fecha: " . $timeCap . " <br />";
+          //echo "DICOM tags: " . $cmdFxdTags . " <br />";
           // Create the DCM with with corresponding tags imported from $InstanceId.dcm using DCMTK's pdf2dcm
           $PDF2DCM = $filesPlace . '/output.dcm';
-          echo 'The encapsulated PDF file in DICOM format is: '.$PDF2DCM . " <br />";
+          //echo 'The encapsulated PDF file in DICOM format is: '.$PDF2DCM . " <br />";
           $cmdP2D     = 'pdf2dcm ' . $compressedPDF . ' ' . $PDF2DCM . ' +st '. $dcmTemplate . $cmdFxdTags;
           exec($cmdP2D);
-          echo 'The command to create the encapsulated PDF is: '.$cmdP2D . " <br />";
+          //echo 'The command to create the encapsulated PDF is: '.$cmdP2D . " <br />";
+            //Create a new StudyInstanceUID if necessary
+            if ($urlBlocks[0] === 'patient')
+            {
+            $cmdCreateNewStudyID = 'dcmodify -gst -gse ' . $PDF2DCM;
+            exec($cmdCreateNewStudyID);
+            //echo 'StudyInstanceUID has been modified' . " <br />";
+            }
+            //echo "file before compression: " . $PDF2DCM . " <br />";
+            $chkfile = 'file ' . $PDF2DCM;
+            // echo (exec($chkfile)) . " <br />";
+
                           // Upload the newly created .dcm in the Orthanc Dicom Server
                           $post_url = $OrthancUrl . $OrthancRESTinstances;
                           $post_str = file_get_contents($PDF2DCM);
@@ -114,13 +134,14 @@ if (isset($_POST['submit']))
                           exec($cmdDELtemp);
   
                             // Smile
-                            echo "<p>The DCM file upload was successfull.</p>";
+                            //echo "<p>The DCM file upload was successfull.</p>";
                             // sleep(3);
-                          $stringAlfa  = '<script type= &quot;text/javascript &quot;> document.location.href = &quot;';
-                          $stringOmega = '&quot;; </script>';
-                          $callingURL = $OrthancExplorer . '#study?uuid='.$studyId;
-                          echo $callingURL;
-                          echo htmlspecialchars_decode($stringAlfa) . $callingURL . htmlspecialchars_decode($stringOmega);
+                            // Redirect this window to the calling page
+                            $stringAlfa  = '<script type= &quot;text/javascript &quot;> document.location.href = &quot;';
+                            $stringOmega = '&quot;; </script>';
+                            $callingURL  = $OrthancExplorer . "#" . $urlBlocks[0] . "?uuid=" . $PathCode;
+                            // echo $callingURL . " <br />";
+                            echo htmlspecialchars_decode($stringAlfa) . $callingURL . htmlspecialchars_decode($stringOmega);
         } #endIF
         else echo "<p>Undefined error, Please contact administrator. </p>";          
       } #endIF

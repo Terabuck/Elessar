@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ORTHANC 1.5.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 19:23-0400\n"
-"PO-Revision-Date: 2020-08-30 16:07-0400\n"
+"POT-Creation-Date: 2020-10-10 23:46-0400\n"
+"PO-Revision-Date: 2020-10-11 00:08-0400\n"
 "Last-Translator: Ludwig Moreno <ludwig.moreno@gmail.com>\n"
 "Language-Team: TRANSLATORS <admin@misimagenes.online>\n"
 "Language: zh\n"
@@ -18,612 +18,462 @@ msgstr ""
 "X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 
-#: explorer.php:31
 msgid "Lookup studies"
 msgstr "查找研究"
 
-#: explorer.php:33
 msgid "Quit"
 msgstr "退出"
 
-#: explorer.php:36 explorer.php:104 explorer.php:127 explorer.php:187
-#: explorer.php:235 explorer.php:277 explorer.php:320
 msgid "Upload"
 msgstr "上传"
 
-#: explorer.php:37 explorer.php:105 explorer.php:128 explorer.php:188
-#: explorer.php:236 explorer.php:278 explorer.php:321 explorer.php:439
-#: explorer.php:453 explorer.php:466
 msgid "Query/Retrieve"
 msgstr "查询/检索"
 
-#: explorer.php:63
 msgid "Patient ID:"
 msgstr "患者 ID："
 
-#: explorer.php:65
 msgid "Patient Name:"
 msgstr "患者姓名："
 
-#: explorer.php:67
 msgid "Accession Number:"
 msgstr "加入编号："
 
-#: explorer.php:70
 msgid "Study Description:"
 msgstr "研究描述："
 
-#: explorer.php:72
 msgid "Study Date:"
 msgstr "学习日期："
 
-#: explorer.php:76 explorer.php:98
 msgid "All patients"
 msgstr "所有患者"
 
-#: explorer.php:78 explorer.php:121
 msgid "All studies"
 msgstr "所有研究"
 
-#: explorer.php:80
 msgid "Do lookup"
 msgstr "做查找"
 
-#: explorer.php:87 explorer.php:111 explorer.php:134 explorer.php:170
 msgid "Warning:"
 msgstr "警告："
 
-#: explorer.php:87
 msgid "Your lookup led to many results! Showing only"
 msgstr "您的查找导致许多结果！仅显示"
 
-#: explorer.php:88
 msgid "studies to avoid performance issue. Please make your query more specific, then relaunch the lookup."
 msgstr "研究以避免性能问题。请使查询更加具体，然后重新启动查找。"
 
-#: explorer.php:100 explorer.php:123 explorer.php:146 explorer.php:183
-#: explorer.php:231 explorer.php:273 explorer.php:316 explorer.php:365
-#: explorer.php:379 explorer.php:436 explorer.php:450 explorer.php:463
-#: explorer.php:485 explorer.php:499
 msgid "Lookup"
 msgstr "查找"
 
-#: explorer.php:101 explorer.php:124 explorer.php:149 explorer.php:184
-#: explorer.php:232 explorer.php:274 explorer.php:317 explorer.php:363
-#: explorer.php:382 explorer.php:437 explorer.php:451 explorer.php:464
-#: explorer.php:488 explorer.php:500
-msgid "Plugins"
-msgstr "插件"
-
-#: explorer.php:106 explorer.php:129 explorer.php:150 explorer.php:189
-#: explorer.php:237 explorer.php:279 explorer.php:322 explorer.php:368
-#: explorer.php:383 explorer.php:483 explorer.php:503
-msgid "Jobs"
-msgstr "任务"
-
-#: explorer.php:111 explorer.php:134
 msgid "This is a large Orthanc server. Showing only"
 msgstr "这是一个大型的 Orthanc 服务器。仅显示"
 
-#: explorer.php:112
 msgid "patients to avoid performance issue. Make sure to use lookup if targeting specific patients!"
 msgstr "患者避免性能问题。如果针对特定患者，请确保使用查找！"
 
-#: explorer.php:135
 msgid "studies to avoid performance issue. Make sure to use lookup if targeting specific studies!"
 msgstr "研究以避免性能问题。如果针对特定研究，请确保使用查找！"
 
-#: explorer.php:144
 msgid "Upload DICOM files"
 msgstr "上传 DICOM 文件"
 
-#: explorer.php:159
+msgid "Plugins"
+msgstr "插件"
+
+msgid "Jobs"
+msgstr "任务"
+
 msgid "Select files to upload ..."
 msgstr "选择要上传的文件..."
 
-#: explorer.php:160
 msgid "Start the upload"
 msgstr "开始上传"
 
-#: explorer.php:163
 msgid "Clear the pending uploads"
 msgstr "清除挂起的上载"
 
-#: explorer.php:172
 msgid "Orthanc issue #21: On Firefox, especially on Linux & OSX systems, files might be missing if using drag-and-drop. Please use the \"Select files to upload\" button instead, or use the command-line \"ImportDicomFiles.py\" script."
 msgstr "Orthanc 问题#21：在 Firefox 上，尤其是在 Linux 和 OSX 系统上，如果使用拖放，文件可能会丢失。请使用\"选择要上载的文件\"按钮，或使用命令行\"ImportDicomFiles.py\"脚本。"
 
-#: explorer.php:175
 msgid "Drag and drop DICOM files here"
 msgstr "在此处拖放 DICOM 文件"
 
-#: explorer.php:181 explorer.php:228 explorer.php:270 explorer.php:312
-#: explorer.php:1009 explorer.php:1058 explorer.php:1108 explorer.php:1215
 msgid "Patient"
 msgstr "患者"
 
-#: explorer.php:197
 msgid "Unprotected"
 msgstr "无保护"
 
-#: explorer.php:198
 msgid "Protected"
 msgstr "受保护"
 
-#: explorer.php:202 explorer.php:244 explorer.php:286 explorer.php:329
 msgid "Interact"
 msgstr "交互"
 
-#: explorer.php:203 explorer.php:246 libs/php/img2orthanc.php:175
-msgid "Add JPG image"
-msgstr "添加JPG图片"
+#
+# File: explorer.php, line: 199
+msgid "New Study from PDF"
+msgstr "PDF 的新研究"
 
-#: explorer.php:204
+#
+# File: explorer.php, line: 202
+msgid "New Study from JPG"
+msgstr "JPG 的新研究"
+
 msgid "Delete this patient"
 msgstr "删除此患者"
 
-#: explorer.php:206
 msgid "Send to remote modality"
 msgstr "发送到远程模式"
 
-#: explorer.php:208 explorer.php:250 explorer.php:290
 msgid "Anonymize"
 msgstr "匿名"
 
-#: explorer.php:211 explorer.php:253 explorer.php:293 explorer.php:336
 msgid "Access"
 msgstr "访问"
 
-#: explorer.php:213 explorer.php:255 explorer.php:295 explorer.php:338
 msgid "Before anonymization"
 msgstr "匿名前"
 
-#: explorer.php:215 explorer.php:257 explorer.php:297 explorer.php:340
 msgid "Before modification"
 msgstr "修改前"
 
-#: explorer.php:216 explorer.php:258 explorer.php:300
 msgid "Download ZIP"
 msgstr "下载 ZIP"
 
-#: explorer.php:217 explorer.php:259 explorer.php:301
 msgid "Download DICOMDIR"
 msgstr "下载 DICOMDIR"
 
-#: explorer.php:229 explorer.php:271 explorer.php:313 explorer.php:1060
-#: explorer.php:1113 explorer.php:1220
 msgid "Study"
 msgstr "研究"
 
-#: explorer.php:245
 msgid "Append PDF report"
 msgstr "发送PDF报告"
 
-#: explorer.php:247
+msgid "Add JPG image"
+msgstr "添加JPG图片"
+
 msgid "Delete this study"
 msgstr "删除此研究"
 
-#: explorer.php:248 explorer.php:288 explorer.php:332
 msgid "Send to DICOM modality"
 msgstr "发送到 DICOM 模式"
 
-#: explorer.php:271 explorer.php:314 explorer.php:1117 explorer.php:1224
 msgid "Series"
 msgstr "系列"
 
-#: explorer.php:287
 msgid "Delete this series"
 msgstr "删除此系列"
 
-#: explorer.php:298
 msgid "Preview this series"
 msgstr "预览此系列"
 
-#: explorer.php:314 explorer.php:1229
 msgid "Instance"
 msgstr "实例"
 
-#: explorer.php:330
 msgid "Delete this instance"
 msgstr "删除此实例"
 
-#: explorer.php:342
 msgid "Download the DICOM file"
 msgstr "下载 DICOM 文件"
 
-#: explorer.php:343
 msgid "Download the JSON file"
 msgstr "下载 JSON 文件"
 
-#: explorer.php:345
 msgid "Preview the instance"
 msgstr "预览实例"
 
-#: explorer.php:351
 msgid "DICOM Tags"
 msgstr "DICOM 标签"
 
-#: explorer.php:353
 msgid "Show tag description"
 msgstr "显示标签描述"
 
-#: explorer.php:377 explorer.php:434 explorer.php:448 explorer.php:461
 msgid "DICOM Query/Retrieve"
 msgstr "DICOM 查询/检索"
 
-#: explorer.php:388
 msgid "DICOM server:"
 msgstr "DICOM 服务器："
 
-#: explorer.php:392
 msgid "Field of interest:"
 msgstr "感兴趣的领域："
 
-#: explorer.php:394
 msgid "Patient ID"
 msgstr "病人ID"
 
-#: explorer.php:396
 msgid "Patient Name"
 msgstr "产品名称"
 
-#: explorer.php:398
 msgid "Accession Number"
 msgstr "加入编号"
 
-#: explorer.php:400
 msgid "Study Description"
 msgstr "研究描述"
 
-#: explorer.php:403
 msgid "Value for this field:"
 msgstr "此字段的值："
 
-#: explorer.php:405
 msgid "Study date:"
 msgstr "学习日期："
 
-#: explorer.php:410
 msgid "Modalities:"
 msgstr "方式："
 
-#: explorer.php:425
 msgid "Test Echo"
 msgstr "测试回声"
 
-#: explorer.php:427
 msgid "Search studies"
 msgstr "搜索研究"
 
-#: explorer.php:470
 msgid "Target AET:"
 msgstr "目标 AET："
 
-#: explorer.php:475
 msgid "Retrieve"
 msgstr "检索"
 
-#: explorer.php:497
 msgid "Job"
 msgstr "任务"
 
-#: explorer.php:509
 msgid "Cancel job"
 msgstr "取消任务"
 
-#: explorer.php:510
 msgid "Resubmit job"
 msgstr "重新提交任务"
 
-#: explorer.php:511
 msgid "Pause job"
 msgstr "暂停重新任务"
 
-#: explorer.php:512
 msgid "Resume job"
 msgstr "继续任务"
 
-#: explorer.php:518
 msgid "Sending to Orthanc peer..."
 msgstr "发送到 Orthanc 同行..."
 
-#: explorer.php:522
 msgid "Sending to DICOM modality..."
 msgstr "发送到 DICOM 模式..."
 
-#: explorer.php:526
 msgid "Retrieving images from DICOM modality..."
 msgstr "从 DICOM 模式检索图像..."
 
-#: explorer.php:532
 msgid "Insecure setup"
 msgstr "不安全的设置"
 
-#: explorer.php:533
 msgid "Your Orthanc server is accepting remote connections, but is using the default username and password, or has user authentication explicitly turned off. Please carefully read your logs and review your configuration, especially options"
 msgstr "您的 Orthanc 服务器正在接受远程连接，但使用默认用户名和密码，或者显式关闭用户身份验证。请仔细阅读日志并查看您的配置，尤其是选项"
 
-#: explorer.php:535
 msgid "and"
 msgstr "和"
 
-#: explorer.php:553
 msgid "Please use Mozilla Firefox or Google Chrome. Microsoft Internet Explorer is not supported."
 msgstr "请使用 Mozilla 火狐或谷歌 Chrome。不支持微软互联网浏览器。"
 
-#: explorer.php:807
 msgid "Status: "
 msgstr "状态："
 
-#: explorer.php:821
 msgid "Instance: "
 msgstr "实例："
 
-#: explorer.php:860 explorer.php:1896
 msgid "Any date"
 msgstr "任意时间"
 
-#: explorer.php:861 explorer.php:1897
 msgid "Today"
 msgstr "今天"
 
-#: explorer.php:862 explorer.php:1898
 msgid "Yesterday"
 msgstr "昨天"
 
-#: explorer.php:863 explorer.php:1900
 msgid "Last 7 days"
 msgstr "最近7天"
 
-#: explorer.php:864 explorer.php:1902
 msgid "Last 31 days"
 msgstr "最近 31 天"
 
-#: explorer.php:866 explorer.php:1904
 msgid "Last 3 months"
 msgstr "近三个月"
 
-#: explorer.php:867 explorer.php:1906
 msgid "Last year"
 msgstr "去年"
 
-#: explorer.php:904
 msgid "Error during lookup"
 msgstr "查找过程中出错"
 
-#: explorer.php:1278 explorer.php:1346 explorer.php:1614 explorer.php:1928
 msgid "OK"
 msgstr "确定"
 
-#: explorer.php:1285 explorer.php:1353 explorer.php:1636
 msgid "Cancel"
 msgstr "取消"
 
-#: explorer.php:1292
 msgid "¿Do you want to leave the DICOM Explorer?"
 msgstr "•是否要离开 DICOM 资源管理器？"
 
-#: explorer.php:1361
 msgid "Delete this instance?"
 msgstr "是否删除此实例？"
 
-#: explorer.php:1365
 msgid "Delete this study?"
 msgstr "删除此研究？"
 
-#: explorer.php:1369
 msgid "Delete this series?"
 msgstr "删除此系列？"
 
-#: explorer.php:1373
 msgid "Delete this patient?"
 msgstr "删除这个病人？"
 
-#: explorer.php:1468
 msgid "DICOM modalities"
 msgstr "DICOM 模式"
 
-#: explorer.php:1491
 msgid "Orthanc peers"
 msgstr "Orthanc 同行"
 
-#: explorer.php:1507
 msgid "Choose target"
 msgstr "选择目标"
 
-#: explorer.php:1558
 msgid "Error during store"
 msgstr "存储期间出错"
 
-#: explorer.php:1644
 msgid "Anonymize this instance?"
 msgstr "匿名化此实例？"
 
-#: explorer.php:1648
 msgid "Anonymize this study?"
 msgstr "匿名化这项研究？"
 
-#: explorer.php:1652
 msgid "Anonymize this series?"
 msgstr "匿名这个系列？"
 
-#: explorer.php:1656
 msgid "Anonymize this patient?"
 msgstr "匿名这个病人？"
 
-#: explorer.php:1734
 msgid "Currently running"
 msgstr "当前正在运行"
 
-#: explorer.php:1737
 msgid "Pending jobs"
 msgstr "挂起的任务"
 
-#: explorer.php:1740
 msgid "Inactive jobs"
 msgstr "非活动挂任务"
 
-#: explorer.php:1751
 msgid "ID: "
 msgstr "ID:"
 
-#: explorer.php:1752
 msgid "Local AET: "
 msgstr "本地 AET："
 
-#: explorer.php:1753
 msgid "Remote AET: "
 msgstr "远程 AET："
 
-#: explorer.php:1754
 msgid "Creation time: "
 msgstr "创建时间："
 
-#: explorer.php:1755
 msgid "Completion time: "
 msgstr "完成时间："
 
-#: explorer.php:1757
 msgid "ETA: "
 msgstr "埃塔："
 
-#: explorer.php:1792
 msgid "General information about the job"
 msgstr "有关作业的一般信息"
 
-#: explorer.php:1809
 msgid "Detailed information"
 msgstr "详细信息"
 
-#: explorer.php:1911
 msgid "Error: The C-Echo has failed!"
 msgstr "错误：C-Echo 出现故障！"
 
-#: explorer.php:1918
 msgid "The C-Echo has succeeded!"
 msgstr "C-Echo 成功了！"
 
-#: explorer.php:1923
 msgid "Echo result"
 msgstr "回声结果"
 
-#: explorer.php:1970 explorer.php:2061
 msgid "Error during query (C-Find)"
 msgstr "查询期间出错（C-Find）"
 
-#: explorer.php:2005
 msgid "Accession number: "
 msgstr "加入编号："
 
-#: explorer.php:2008
 msgid "Birth date: "
 msgstr "出生日期："
 
-#: explorer.php:2011
 msgid "Patient sex: "
 msgstr "患者性别："
 
-#: explorer.php:2014
 msgid "Study description: "
 msgstr "研究描述："
 
-#: explorer.php:2017
 msgid "Study date: "
 msgstr "学习日期："
 
-#: explorer.php:2023
 msgid "Retrieve all study"
 msgstr "检索所有研究"
 
-#: explorer.php:2086
 msgid "Modality: "
 msgstr "模态："
 
-#: explorer.php:2094
 msgid "Protocol Name: "
 msgstr "协议名称："
 
-#: explorer.php:2175
 msgid "Error during retrieve"
 msgstr "检索期间出错"
 
-#: explorer.php:2210
 msgid "Done"
 msgstr "完成"
 
-#: explorer.php:2216
 msgid "Failure"
 msgstr "失败"
 
-#: explorer.php:2227
 msgid "Uploading: "
 msgstr "上传："
 
-#: libs/php/img2orthanc.php:176 libs/php/pdf2orthanc.php:149
-msgid "to include it in the DICOM DB"
-msgstr "包括它到 DICOM DB"
+#~ msgid "to include it in the DICOM DB"
+#~ msgstr "包括它到 DICOM DB"
 
-#: libs/php/img2orthanc.php:178 libs/php/pdf2orthanc.php:151
-msgid "Sorry, your browser is not accepting CANVAS HTML tag."
-msgstr "抱歉，您的浏览器不接受 CANVAS HTML 标签。"
+#~ msgid "Sorry, your browser is not accepting CANVAS HTML tag."
+#~ msgstr "抱歉，您的浏览器不接受 CANVAS HTML 标签。"
 
-#: libs/php/img2orthanc.php:179 libs/php/pdf2orthanc.php:152
-msgid "Select file"
-msgstr "选择文件"
+#~ msgid "Select file"
+#~ msgstr "选择文件"
 
-#: libs/php/login-vista.php:5 libs/php/register-vista.php:5
-msgid "Login/Register DICOM DB user"
-msgstr "登录/注册 DICOM DB 用户"
+#~ msgid "Login/Register DICOM DB user"
+#~ msgstr "登录/注册 DICOM DB 用户"
 
-#: libs/php/login-vista.php:22 libs/php/login-vista.php:44
-#: libs/php/register-vista.php:22
-msgid "Login"
-msgstr "登录"
+#~ msgid "Login"
+#~ msgstr "登录"
 
-#: libs/php/login-vista.php:23 libs/php/register-vista.php:23
-#: libs/php/register-vista.php:53
-msgid "Register"
-msgstr "注册"
+#~ msgid "Register"
+#~ msgstr "注册"
 
-#: libs/php/login-vista.php:28 libs/php/register-vista.php:28
-msgid "Access the"
-msgstr "访问"
+#~ msgid "Access the"
+#~ msgstr "访问"
 
-#: libs/php/login-vista.php:28 libs/php/register-vista.php:28
-msgid "DICOM web"
-msgstr "DICOM 服务"
+#~ msgid "DICOM web"
+#~ msgstr "DICOM 服务"
 
-#: libs/php/login-vista.php:31 libs/php/register-vista.php:36
-msgid "Username"
-msgstr "用户名"
+#~ msgid "Username"
+#~ msgstr "用户名"
 
-#: libs/php/login-vista.php:35 libs/php/register-vista.php:40
-msgid "Password"
-msgstr "密码"
+#~ msgid "Password"
+#~ msgstr "密码"
 
-#: libs/php/pdf2orthanc.php:148
-msgid "Attach PDF report"
-msgstr "发送PDF报告"
+#~ msgid "Attach PDF report"
+#~ msgstr "发送PDF报告"
 
-#: libs/php/register-vista.php:32
-msgid "eMail"
-msgstr "邮件"
+#~ msgid "eMail"
+#~ msgstr "邮件"
 
-#: libs/php/register-vista.php:44
-msgid "Confirm Password"
-msgstr "确认密码"
+#~ msgid "Confirm Password"
+#~ msgstr "确认密码"
 
-msgid "Please complete all the fields"
-msgstr "请完成所有字段"
+#~ msgid "Please complete all the fields"
+#~ msgstr "请完成所有字段"
 
-msgid "This username is already registered"
-msgstr "这个用户名已被注册"
+#~ msgid "This username is already registered"
+#~ msgstr "这个用户名已被注册"
 
-msgid "Passwords do not match"
-msgstr "密码不匹配"
+#~ msgid "Passwords do not match"
+#~ msgstr "密码不匹配"
 
-msgid "The user has been successfully registered"
-msgstr "用户已成功注册"
+#~ msgid "The user has been successfully registered"
+#~ msgstr "用户已成功注册"
 
-msgid "This username is not registered"
-msgstr "此用户名还未注册"
+#~ msgid "This username is not registered"
+#~ msgstr "此用户名还未注册"

@@ -196,7 +196,10 @@ include("includes/auth.php");
                 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c">
                     <li data-role="list-divider"><?=_('Interact')?></li>
                     <li data-icon="arrow-u">
-                        <a href="#" id="upload-picture"><?=_('Add JPG image')?></a>
+                        <a href="#" id="upload-report"><?=_('New Study from PDF')?></a>
+                    </li>
+                    <li data-icon="arrow-u">
+                        <a href="#" id="upload-picture"><?=_('New Study from JPG')?></a>
                     </li>
                     <li data-icon="delete">
                         <a href="#" id="patient-delete"><?=_('Delete this patient')?></a>
@@ -251,7 +254,7 @@ include("includes/auth.php");
                 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c">
                     <li data-role="list-divider"><?=_('Interact')?></li>
                     <li data-icon="plus">
-                        <a href="#" id="upload-report"><?=_('Append PDF report')?></a>
+                        <a href="#" id="upload-report2"><?=_('Append PDF report')?></a>
                     </li>
                     <li data-icon="arrow-u">
                         <a href="#" id="upload-picture2"><?=_('Add JPG image')?></a>
@@ -1344,7 +1347,15 @@ function OpenUploadReportDialog(path) {
     //window.location = "https://misimagenes.online/ngl/app/pdf2orthanc.php?" + path;
 };
 $('#upload-report').live('click', function() {
-    OpenUploadReportDialog($.mobile.pageData.uuid);
+    OpenUploadReportDialog('patient=' + $.mobile.pageData.uuid);
+});
+function OpenUploadReportDialog(path) {
+    document.location.href = "libs/php/pdf2orthanc.php?" + path
+    // window.open("libs/php/pdf2orthanc.php?" + path, "", "width=340,height=440")
+    //window.location = "https://misimagenes.online/ngl/app/pdf2orthanc.php?" + path;
+};
+$('#upload-report2').live('click', function() {
+    OpenUploadReportDialog('study=' + $.mobile.pageData.uuid);
 });
 function OpenUploadImageDialog(path) {
     document.location.href = "libs/php/img2orthanc.php?" + path

@@ -1,22 +1,26 @@
 <?php
 require("../../includes/auth.php");
+// System variables are defined in the following file:
 require("../../includes/localdefs.php");
+
 // Execute only after file submission
 if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
 {
   $img             = $_POST['img'];
   // Get current actual URL
   $actualLink      = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
-  echo 'Actual Link: ' . $actualLink . "<br /> ";
+  // echo 'Actual Link: ' . $actualLink . "<br /> ";
+
   // Get the study ID from the query param of the calling UR
   $urlQuery  = parse_url($actualLink, PHP_URL_QUERY);
+  // echo 'StudyID: '. $studyId ."<br /> ";
   $urlBlocks = explode("=", $urlQuery);
   $PathCode  = $urlBlocks[1];
-  echo $urlBlocks[0] . " = " . $PathCode . "<br /> ";
+  // echo $urlBlocks[0] . " = " . $PathCode . "<br /> ";
   // Get the host and path from the query param of the calling URL
   $getHOST       = parse_url($actualLink, PHP_URL_HOST);
-  echo 'getHost: '.$getHOST."<br /> ";
-  echo 'LocalServer: '.$LocalServer."<br /> ";
+  // echo 'getHost: '.$getHOST."<br /> ";
+  // echo 'LocalServer: '.$LocalServer."<br /> ";
   // Compare calling url to enabled Origin and proceed if correct
   if ($getHOST != $LocalServer)
   {
@@ -28,6 +32,7 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
     $filesPlace = $PublicPath. $PathCode;
     $cmdMKDIRtemp = 'mkdir -p ' . $filesPlace;
     exec($cmdMKDIRtemp);
+    // echo 'the temporal folder with the name of the study is: '. $filesPlace. " <br />";
     // Upload the JPG file
     if (strpos($img, 'data:image/jpeg;base64,') === 0)
     {
@@ -39,7 +44,7 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
     $source = $filesPlace . '/img' . date("YmdHis") . $ext;
     if (file_put_contents($source, $data))
     {
-      echo "<p>The image was saved as $source.</p>";
+      // echo "<p>The image was saved as $source.</p>";
     }
     else
     {
@@ -58,6 +63,7 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
       $OrthancRESTcode      = $OrthancRESTpatients;
     }
     // Fetch the first instance belonging to the $PathCode;
+    // echo '$OrthancRESTcode 0 '. $OrthancRESTcode  . " <br />";
     $json_string          = $OrthancUrl . $OrthancRESTcode . "/" . $PathCode . $OrthancRESTinstances;
     $jsondata             = file_get_contents($json_string);
     $obj                  = json_decode($jsondata, true);
@@ -79,23 +85,23 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
     curl_exec($ch);
     curl_close($ch);
     fclose($fp);
-    echo "template: " . $dcmTemplate . " <br />";
-    $chkfile = 'file ' . $dcmTemplate;
-    echo (exec($chkfile)) . " <br />";
-    echo "source: " . $source . " <br />";
-    $chkfile = 'file ' . $source;
-    echo (exec($chkfile)) . " <br />";
+    // echo "template: " . $dcmTemplate . " <br />";
+    // $chkfile = 'file ' . $dcmTemplate;
+    // echo (exec($chkfile)) . " <br />";
+    // echo "source: " . $source . " <br />";
+    // $chkfile = 'file ' . $source;
+    // echo (exec($chkfile)) . " <br />";
     // Fix Date and  Tags
     $timeCap    = date('Ymd');
     $tags       = ' -k &quot;StudyDate&quot;=' . $timeCap . ' -k &quot;SeriesDate&quot;=' . $timeCap . ' -k &quot;AcquisitionDate&quot;=' . $timeCap . ' -k &quot;StudyDescription&quot;=Image -k &quot;Modality&quot;=XC -k &quot;InstanceNumber&quot;=1 -k &quot;Manufacturer&quot;=&quot;cloud dicomized at misimagenes.online&quot;';
     $cmdFxdTags = htmlspecialchars_decode($tags, ENT_QUOTES);
-    echo "Fecha: " . $timeCap . " <br />";
-    echo "DICOM tags: " . $cmdFxdTags . " <br />";
+    // echo "Fecha: " . $timeCap . " <br />";
+    // echo "DICOM tags: " . $cmdFxdTags . " <br />";
     // Create the DCM with with corresponding tags imported from $InstanceId.dcms using DCMTK's img2dcm
     $uncompressedDCM = $filesPlace . '/img_output.dcm';
     $cmdP2D          = 'img2dcm ' . $source . ' ' . $uncompressedDCM . ' -stf ' . $dcmTemplate . $cmdFxdTags;
     exec($cmdP2D);
-    echo $cmdP2D . " <br />";
+    // echo $cmdP2D . " <br />";
     // Free the memory
     imagedestroy($source);
     //Create a new StudyInstanceUID if necessary
@@ -103,11 +109,11 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
     {
       $cmdCreateNewStudyID = 'dcmodify -gst -gse ' . $uncompressedDCM;
       exec($cmdCreateNewStudyID);
-      echo 'StudyInstanceUID has been modified' . " <br />";
+      // echo 'StudyInstanceUID has been modified' . " <br />";
     }
-    echo "file befor compression: " . $uncompressedDCM . " <br />";
+    // echo "file before compression: " . $uncompressedDCM . " <br />";
     $chkfile = 'file ' . $uncompressedDCM;
-    echo (exec($chkfile)) . " <br />";
+    // echo (exec($chkfile)) . " <br />";
           // Upload the newly created .dcm in the Orthanc Dicom Server
           $post_url = $OrthancUrl . $OrthancRESTinstances;
           $post_str = file_get_contents($uncompressedDCM);
@@ -128,16 +134,16 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
           curl_close($ch);
     // Delete temporal files
     $cmdDELtemp = 'rm -r ' . $filesPlace;
-    exec($cmdDELtemp);
+    // exec($cmdDELtemp);
     
     // Smile
-    echo "<p>The pdf file upload was successfull.</p>";
+    // echo "<p>The pdf file upload was successfull.</p>";
     // sleep(3);
     // Redirect this window to the calling page
     $stringAlfa  = '<script type= &quot;text/javascript &quot;> document.location.href = &quot;';
     $stringOmega = '&quot;; </script>';
     $callingURL  = $OrthancExplorer . "#" . $urlBlocks[0] . "?uuid=" . $PathCode;
-    echo $callingURL . " <br />";
+    // echo $callingURL . " <br />";
     echo htmlspecialchars_decode($stringAlfa) . $callingURL . htmlspecialchars_decode($stringOmega);
   } #endIF
     

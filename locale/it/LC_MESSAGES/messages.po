@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ORTHANC 1.5.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 19:23-0400\n"
-"PO-Revision-Date: 2020-08-30 16:05-0400\n"
+"POT-Creation-Date: 2020-10-10 23:46-0400\n"
+"PO-Revision-Date: 2020-10-11 00:03-0400\n"
 "Last-Translator: Ludwig Moreno <ludwig.moreno@gmail.com>\n"
 "Language-Team: TRANSLATORS <admin@misimagenes.online>\n"
 "Language: it\n"
@@ -18,612 +18,462 @@ msgstr ""
 "X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 
-#: explorer.php:31
 msgid "Lookup studies"
 msgstr "Ricerca di studi"
 
-#: explorer.php:33
 msgid "Quit"
 msgstr "Esci"
 
-#: explorer.php:36 explorer.php:104 explorer.php:127 explorer.php:187
-#: explorer.php:235 explorer.php:277 explorer.php:320
 msgid "Upload"
 msgstr "Carica"
 
-#: explorer.php:37 explorer.php:105 explorer.php:128 explorer.php:188
-#: explorer.php:236 explorer.php:278 explorer.php:321 explorer.php:439
-#: explorer.php:453 explorer.php:466
 msgid "Query/Retrieve"
 msgstr "Interrogazione/Recupero"
 
-#: explorer.php:63
 msgid "Patient ID:"
 msgstr "ID paziente:"
 
-#: explorer.php:65
 msgid "Patient Name:"
 msgstr "Nome paziente:"
 
-#: explorer.php:67
 msgid "Accession Number:"
 msgstr "Numero di adesione:"
 
-#: explorer.php:70
 msgid "Study Description:"
 msgstr "Descrizione studio:"
 
-#: explorer.php:72
 msgid "Study Date:"
 msgstr "Data studio:"
 
-#: explorer.php:76 explorer.php:98
 msgid "All patients"
 msgstr "Tutti i pazienti"
 
-#: explorer.php:78 explorer.php:121
 msgid "All studies"
 msgstr "Tutti gli studi"
 
-#: explorer.php:80
 msgid "Do lookup"
 msgstr "Eseguire la ricerca"
 
-#: explorer.php:87 explorer.php:111 explorer.php:134 explorer.php:170
 msgid "Warning:"
 msgstr "Attenzione:"
 
-#: explorer.php:87
 msgid "Your lookup led to many results! Showing only"
 msgstr "La tua ricerca ha portato a molti risultati! Visualizzazione solo"
 
-#: explorer.php:88
 msgid "studies to avoid performance issue. Please make your query more specific, then relaunch the lookup."
 msgstr "studi per evitare problemi di prestazioni. Si prega di rendere la query più specifica, quindi riavviare la ricerca."
 
-#: explorer.php:100 explorer.php:123 explorer.php:146 explorer.php:183
-#: explorer.php:231 explorer.php:273 explorer.php:316 explorer.php:365
-#: explorer.php:379 explorer.php:436 explorer.php:450 explorer.php:463
-#: explorer.php:485 explorer.php:499
 msgid "Lookup"
 msgstr "Ricerca"
 
-#: explorer.php:101 explorer.php:124 explorer.php:149 explorer.php:184
-#: explorer.php:232 explorer.php:274 explorer.php:317 explorer.php:363
-#: explorer.php:382 explorer.php:437 explorer.php:451 explorer.php:464
-#: explorer.php:488 explorer.php:500
-msgid "Plugins"
-msgstr "Plugins"
-
-#: explorer.php:106 explorer.php:129 explorer.php:150 explorer.php:189
-#: explorer.php:237 explorer.php:279 explorer.php:322 explorer.php:368
-#: explorer.php:383 explorer.php:483 explorer.php:503
-msgid "Jobs"
-msgstr "Lavori"
-
-#: explorer.php:111 explorer.php:134
 msgid "This is a large Orthanc server. Showing only"
 msgstr "Questo è un grande server Orthanc. Visualizzazione solo"
 
-#: explorer.php:112
 msgid "patients to avoid performance issue. Make sure to use lookup if targeting specific patients!"
 msgstr "pazienti per evitare problemi di prestazioni. Assicurati di utilizzare la ricerca se ti rivolgi a pazienti specifici!"
 
-#: explorer.php:135
 msgid "studies to avoid performance issue. Make sure to use lookup if targeting specific studies!"
 msgstr "studi per evitare problemi di prestazioni. Assicurati di utilizzare la ricerca se tiri a studi specifici!"
 
-#: explorer.php:144
 msgid "Upload DICOM files"
 msgstr "Caricare file DICOM"
 
-#: explorer.php:159
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "Jobs"
+msgstr "Lavori"
+
 msgid "Select files to upload ..."
 msgstr "Selezionare i file da caricare ..."
 
-#: explorer.php:160
 msgid "Start the upload"
 msgstr "Avviare il caricamento"
 
-#: explorer.php:163
 msgid "Clear the pending uploads"
 msgstr "Cancellare i caricamenti in sospeso"
 
-#: explorer.php:172
 msgid "Orthanc issue #21: On Firefox, especially on Linux & OSX systems, files might be missing if using drag-and-drop. Please use the \"Select files to upload\" button instead, or use the command-line \"ImportDicomFiles.py\" script."
 msgstr "Problema di Orthanc #21: su Firefox, in particolare sui sistemi Linux e OSX, i file potrebbero essere mancanti se si utilizza il trascinamento della selezione. Si prega di utilizzare il pulsante \"Seleziona i file da caricare\" invece, o utilizzare la riga di comando \"ImportDicomFiles.py\" script."
 
-#: explorer.php:175
 msgid "Drag and drop DICOM files here"
 msgstr "Trascina e rilascia i file DICOM qui"
 
-#: explorer.php:181 explorer.php:228 explorer.php:270 explorer.php:312
-#: explorer.php:1009 explorer.php:1058 explorer.php:1108 explorer.php:1215
 msgid "Patient"
 msgstr "Paziente"
 
-#: explorer.php:197
 msgid "Unprotected"
 msgstr "Non protetto"
 
-#: explorer.php:198
 msgid "Protected"
 msgstr "Protetto"
 
-#: explorer.php:202 explorer.php:244 explorer.php:286 explorer.php:329
 msgid "Interact"
 msgstr "Interagire"
 
-#: explorer.php:203 explorer.php:246 libs/php/img2orthanc.php:175
-msgid "Add JPG image"
-msgstr "Aggiungi immagine JPG"
+#
+# File: explorer.php, line: 199
+msgid "New Study from PDF"
+msgstr "Nuovo studio da PDF"
 
-#: explorer.php:204
+#
+# File: explorer.php, line: 202
+msgid "New Study from JPG"
+msgstr "Nuovo studio da JPG"
+
 msgid "Delete this patient"
 msgstr "Elimina questo paziente"
 
-#: explorer.php:206
 msgid "Send to remote modality"
 msgstr "Modalità di invio a distanza"
 
-#: explorer.php:208 explorer.php:250 explorer.php:290
 msgid "Anonymize"
 msgstr "Anonimizza"
 
-#: explorer.php:211 explorer.php:253 explorer.php:293 explorer.php:336
 msgid "Access"
 msgstr "Accesso"
 
-#: explorer.php:213 explorer.php:255 explorer.php:295 explorer.php:338
 msgid "Before anonymization"
 msgstr "Prima dell’anonimato"
 
-#: explorer.php:215 explorer.php:257 explorer.php:297 explorer.php:340
 msgid "Before modification"
 msgstr "Prima della modifica"
 
-#: explorer.php:216 explorer.php:258 explorer.php:300
 msgid "Download ZIP"
 msgstr "Scarica lo zip"
 
-#: explorer.php:217 explorer.php:259 explorer.php:301
 msgid "Download DICOMDIR"
 msgstr "Scarica DICOMR"
 
-#: explorer.php:229 explorer.php:271 explorer.php:313 explorer.php:1060
-#: explorer.php:1113 explorer.php:1220
 msgid "Study"
 msgstr "Studio"
 
-#: explorer.php:245
 msgid "Append PDF report"
 msgstr "Aggiungi rapporto PDF"
 
-#: explorer.php:247
+msgid "Add JPG image"
+msgstr "Aggiungi immagine JPG"
+
 msgid "Delete this study"
 msgstr "Elimina questo studio"
 
-#: explorer.php:248 explorer.php:288 explorer.php:332
 msgid "Send to DICOM modality"
 msgstr "Modalità Invia a DICOM"
 
-#: explorer.php:271 explorer.php:314 explorer.php:1117 explorer.php:1224
 msgid "Series"
 msgstr "Serie"
 
-#: explorer.php:287
 msgid "Delete this series"
 msgstr "Elimina questa serie"
 
-#: explorer.php:298
 msgid "Preview this series"
 msgstr "Visualizza l’anteprima di questa serie"
 
-#: explorer.php:314 explorer.php:1229
 msgid "Instance"
 msgstr "Istanza"
 
-#: explorer.php:330
 msgid "Delete this instance"
 msgstr "Elimina questa istanza"
 
-#: explorer.php:342
 msgid "Download the DICOM file"
 msgstr "Scaricare il file DICOM"
 
-#: explorer.php:343
 msgid "Download the JSON file"
 msgstr "Scaricare il file JSONDownload the JSON file"
 
-#: explorer.php:345
 msgid "Preview the instance"
 msgstr "Visualizzare l’anteprima dell’istanza"
 
-#: explorer.php:351
 msgid "DICOM Tags"
 msgstr "Tag DICOM"
 
-#: explorer.php:353
 msgid "Show tag description"
 msgstr "Mostra descrizione tag"
 
-#: explorer.php:377 explorer.php:434 explorer.php:448 explorer.php:461
 msgid "DICOM Query/Retrieve"
 msgstr "Cerca/Recupera DICOM"
 
-#: explorer.php:388
 msgid "DICOM server:"
 msgstr "Server DICOM:"
 
-#: explorer.php:392
 msgid "Field of interest:"
 msgstr "Campo di interesse:"
 
-#: explorer.php:394
 msgid "Patient ID"
 msgstr "ID paziente"
 
-#: explorer.php:396
 msgid "Patient Name"
 msgstr "Nome Paziente"
 
-#: explorer.php:398
 msgid "Accession Number"
 msgstr "Numero di adesione"
 
-#: explorer.php:400
 msgid "Study Description"
 msgstr "Descrizione studio"
 
-#: explorer.php:403
 msgid "Value for this field:"
 msgstr "Valore per questo campo:"
 
-#: explorer.php:405
 msgid "Study date:"
 msgstr "Data dello studio:"
 
-#: explorer.php:410
 msgid "Modalities:"
 msgstr "Modalità:"
 
-#: explorer.php:425
 msgid "Test Echo"
 msgstr "Eco di prova"
 
-#: explorer.php:427
 msgid "Search studies"
 msgstr "Studi di ricerca"
 
-#: explorer.php:470
 msgid "Target AET:"
 msgstr "AET di destinazione:"
 
-#: explorer.php:475
 msgid "Retrieve"
 msgstr "Recupera"
 
-#: explorer.php:497
 msgid "Job"
 msgstr "Lavoro"
 
-#: explorer.php:509
 msgid "Cancel job"
 msgstr "Annulla processo"
 
-#: explorer.php:510
 msgid "Resubmit job"
 msgstr "Invia di nuovo il processo"
 
-#: explorer.php:511
 msgid "Pause job"
 msgstr "Sospendi processo"
 
-#: explorer.php:512
 msgid "Resume job"
 msgstr "Riprendi processo"
 
-#: explorer.php:518
 msgid "Sending to Orthanc peer..."
 msgstr "Invio a Orthanc peer..."
 
-#: explorer.php:522
 msgid "Sending to DICOM modality..."
 msgstr "Invio a modalità DICOM..."
 
-#: explorer.php:526
 msgid "Retrieving images from DICOM modality..."
 msgstr "Recupero di immagini dalla modalità DICOM in corso..."
 
-#: explorer.php:532
 msgid "Insecure setup"
 msgstr "Configurazione non sicura"
 
-#: explorer.php:533
 msgid "Your Orthanc server is accepting remote connections, but is using the default username and password, or has user authentication explicitly turned off. Please carefully read your logs and review your configuration, especially options"
 msgstr "Il server Orthanc accetta connessioni remote, ma utilizza il nome utente e la password predefiniti o l’autenticazione utente è disattivata in modo esplicito. Si prega di leggere attentamente i log ed esaminare la configurazione, in particolare le opzioni"
 
-#: explorer.php:535
 msgid "and"
 msgstr "e"
 
-#: explorer.php:553
 msgid "Please use Mozilla Firefox or Google Chrome. Microsoft Internet Explorer is not supported."
 msgstr "Si prega di utilizzare Mozilla Firefox o Google Chrome. Microsoft Internet Explorer non è supportato."
 
-#: explorer.php:807
 msgid "Status: "
 msgstr "Stato: "
 
-#: explorer.php:821
 msgid "Instance: "
 msgstr "Istanza: "
 
-#: explorer.php:860 explorer.php:1896
 msgid "Any date"
 msgstr "Qualsiasi data"
 
-#: explorer.php:861 explorer.php:1897
 msgid "Today"
 msgstr "Oggi"
 
-#: explorer.php:862 explorer.php:1898
 msgid "Yesterday"
 msgstr "Ieri"
 
-#: explorer.php:863 explorer.php:1900
 msgid "Last 7 days"
 msgstr "Ultimi 7 giorni"
 
-#: explorer.php:864 explorer.php:1902
 msgid "Last 31 days"
 msgstr "Ultimi 31 giorni"
 
-#: explorer.php:866 explorer.php:1904
 msgid "Last 3 months"
 msgstr "Ultimi 3 Mesi"
 
-#: explorer.php:867 explorer.php:1906
 msgid "Last year"
 msgstr "Anno scorso"
 
-#: explorer.php:904
 msgid "Error during lookup"
 msgstr "Errore durante la ricerca"
 
-#: explorer.php:1278 explorer.php:1346 explorer.php:1614 explorer.php:1928
 msgid "OK"
 msgstr "Va bene"
 
-#: explorer.php:1285 explorer.php:1353 explorer.php:1636
 msgid "Cancel"
 msgstr "Annulla"
 
-#: explorer.php:1292
 msgid "¿Do you want to leave the DICOM Explorer?"
 msgstr "Vuoi lasciare il DICOM Explorer?"
 
-#: explorer.php:1361
 msgid "Delete this instance?"
 msgstr "Eliminare questa istanza?"
 
-#: explorer.php:1365
 msgid "Delete this study?"
 msgstr "Eliminare questo studio?"
 
-#: explorer.php:1369
 msgid "Delete this series?"
 msgstr "Eliminare questa serie?"
 
-#: explorer.php:1373
 msgid "Delete this patient?"
 msgstr "Eliminare questo paziente?"
 
-#: explorer.php:1468
 msgid "DICOM modalities"
 msgstr "Modalità DICOM"
 
-#: explorer.php:1491
 msgid "Orthanc peers"
 msgstr "Omologhi Orthanc"
 
-#: explorer.php:1507
 msgid "Choose target"
 msgstr "Scegli destinazione"
 
-#: explorer.php:1558
 msgid "Error during store"
 msgstr "Errore durante il negozio"
 
-#: explorer.php:1644
 msgid "Anonymize this instance?"
 msgstr "Anonimizza questa istanza?"
 
-#: explorer.php:1648
 msgid "Anonymize this study?"
 msgstr "Anonimizza questo studio?"
 
-#: explorer.php:1652
 msgid "Anonymize this series?"
 msgstr "Anonimizza questa serie?"
 
-#: explorer.php:1656
 msgid "Anonymize this patient?"
 msgstr "Anonimizza questo paziente?"
 
-#: explorer.php:1734
 msgid "Currently running"
 msgstr "Attualmente in esecuzione"
 
-#: explorer.php:1737
 msgid "Pending jobs"
 msgstr "Processi in sospeso"
 
-#: explorer.php:1740
 msgid "Inactive jobs"
 msgstr "Processi inattivi"
 
-#: explorer.php:1751
 msgid "ID: "
 msgstr "ID: "
 
-#: explorer.php:1752
 msgid "Local AET: "
 msgstr "AET locale: "
 
-#: explorer.php:1753
 msgid "Remote AET: "
 msgstr "AET di destinazione: "
 
-#: explorer.php:1754
 msgid "Creation time: "
 msgstr "Ora di creazione: "
 
-#: explorer.php:1755
 msgid "Completion time: "
 msgstr "Tempo di completamento: "
 
-#: explorer.php:1757
 msgid "ETA: "
 msgstr "ETA: "
 
-#: explorer.php:1792
 msgid "General information about the job"
 msgstr "Informazioni generali sul lavoro"
 
-#: explorer.php:1809
 msgid "Detailed information"
 msgstr "Informazioni dettagliate"
 
-#: explorer.php:1911
 msgid "Error: The C-Echo has failed!"
 msgstr "Errore: C-Echo non è riuscito!"
 
-#: explorer.php:1918
 msgid "The C-Echo has succeeded!"
 msgstr "Il C-Echo è riuscito!"
 
-#: explorer.php:1923
 msgid "Echo result"
 msgstr "Risultato eco"
 
-#: explorer.php:1970 explorer.php:2061
 msgid "Error during query (C-Find)"
 msgstr "Errore durante la query (C-Find)"
 
-#: explorer.php:2005
 msgid "Accession number: "
 msgstr "Numero di adesione: "
 
-#: explorer.php:2008
 msgid "Birth date: "
 msgstr "Data di nascita: "
 
-#: explorer.php:2011
 msgid "Patient sex: "
 msgstr "Sesso del paziente: "
 
-#: explorer.php:2014
 msgid "Study description: "
 msgstr "Descrizione dello studio: "
 
-#: explorer.php:2017
 msgid "Study date: "
 msgstr "Data dello studio: "
 
-#: explorer.php:2023
 msgid "Retrieve all study"
 msgstr "Recupera tutti gli studi"
 
-#: explorer.php:2086
 msgid "Modality: "
 msgstr "Modalità: "
 
-#: explorer.php:2094
 msgid "Protocol Name: "
 msgstr "Nome protocollo: "
 
-#: explorer.php:2175
 msgid "Error during retrieve"
 msgstr "Errore durante il recupero"
 
-#: explorer.php:2210
 msgid "Done"
 msgstr "Fatto"
 
-#: explorer.php:2216
 msgid "Failure"
 msgstr "Errore"
 
-#: explorer.php:2227
 msgid "Uploading: "
 msgstr "Caricamento: "
 
-#: libs/php/img2orthanc.php:176 libs/php/pdf2orthanc.php:149
-msgid "to include it in the DICOM DB"
-msgstr "per includerlo nel DB DICOM"
+#~ msgid "to include it in the DICOM DB"
+#~ msgstr "per includerlo nel DB DICOM"
 
-#: libs/php/img2orthanc.php:178 libs/php/pdf2orthanc.php:151
-msgid "Sorry, your browser is not accepting CANVAS HTML tag."
-msgstr "Spiacenti, il browser non accetta il tag HTML CANVAS."
+#~ msgid "Sorry, your browser is not accepting CANVAS HTML tag."
+#~ msgstr "Spiacenti, il browser non accetta il tag HTML CANVAS."
 
-#: libs/php/img2orthanc.php:179 libs/php/pdf2orthanc.php:152
-msgid "Select file"
-msgstr "Seleziona file"
+#~ msgid "Select file"
+#~ msgstr "Seleziona file"
 
-#: libs/php/login-vista.php:5 libs/php/register-vista.php:5
-msgid "Login/Register DICOM DB user"
-msgstr "Login/Registra utente DB DICOM"
+#~ msgid "Login/Register DICOM DB user"
+#~ msgstr "Login/Registra utente DB DICOM"
 
-#: libs/php/login-vista.php:22 libs/php/login-vista.php:44
-#: libs/php/register-vista.php:22
-msgid "Login"
-msgstr "Accedi"
+#~ msgid "Login"
+#~ msgstr "Accedi"
 
-#: libs/php/login-vista.php:23 libs/php/register-vista.php:23
-#: libs/php/register-vista.php:53
-msgid "Register"
-msgstr "Registrati"
+#~ msgid "Register"
+#~ msgstr "Registrati"
 
-#: libs/php/login-vista.php:28 libs/php/register-vista.php:28
-msgid "Access the"
-msgstr "Accedi alle"
+#~ msgid "Access the"
+#~ msgstr "Accedi alle"
 
-#: libs/php/login-vista.php:28 libs/php/register-vista.php:28
-msgid "DICOM web"
-msgstr "Server DICOM"
+#~ msgid "DICOM web"
+#~ msgstr "Server DICOM"
 
-#: libs/php/login-vista.php:31 libs/php/register-vista.php:36
-msgid "Username"
-msgstr "Nome utente"
+#~ msgid "Username"
+#~ msgstr "Nome utente"
 
-#: libs/php/login-vista.php:35 libs/php/register-vista.php:40
-msgid "Password"
-msgstr "Password"
+#~ msgid "Password"
+#~ msgstr "Password"
 
-#: libs/php/pdf2orthanc.php:148
-msgid "Attach PDF report"
-msgstr "Aggiungi rapporto PDF"
+#~ msgid "Attach PDF report"
+#~ msgstr "Aggiungi rapporto PDF"
 
-#: libs/php/register-vista.php:32
-msgid "eMail"
-msgstr "E-mail"
+#~ msgid "eMail"
+#~ msgstr "E-mail"
 
-#: libs/php/register-vista.php:44
-msgid "Confirm Password"
-msgstr "Conferma Password"
+#~ msgid "Confirm Password"
+#~ msgstr "Conferma Password"
 
-msgid "Please complete all the fields"
-msgstr "Si prega di compilare tutti i campi"
+#~ msgid "Please complete all the fields"
+#~ msgstr "Si prega di compilare tutti i campi"
 
-msgid "This username is already registered"
-msgstr "Questo nome utente è già registrato"
+#~ msgid "This username is already registered"
+#~ msgstr "Questo nome utente è già registrato"
 
-msgid "Passwords do not match"
-msgstr "Le password non corrispondono"
+#~ msgid "Passwords do not match"
+#~ msgstr "Le password non corrispondono"
 
-msgid "The user has been successfully registered"
-msgstr "L'utente è stato registrato con successo"
+#~ msgid "The user has been successfully registered"
+#~ msgstr "L'utente è stato registrato con successo"
 
-msgid "This username is not registered"
-msgstr "Questo nome utente non è registrato"
+#~ msgid "This username is not registered"
+#~ msgstr "Questo nome utente non è registrato"
