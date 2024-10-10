@@ -1,5 +1,6 @@
 <?php
 require("../../includes/auth.php");
+
 // System variables are defined in the following file:
 require("../../includes/localdefs.php");
 
@@ -14,7 +15,7 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
   // Get the study ID from the query param of the calling UR
   $urlQuery  = parse_url($actualLink, PHP_URL_QUERY);
   // echo 'StudyID: '. $studyId ."<br /> ";
-  $urlBlocks = explode("=", $urlQuery);
+  $urlBlocks = explode("/", $urlQuery);
   $PathCode  = $urlBlocks[1];
   // echo $urlBlocks[0] . " = " . $PathCode . "<br /> ";
   // Get the host and path from the query param of the calling URL
@@ -24,7 +25,7 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
   // Compare calling url to enabled Origin and proceed if correct
   if ($getHOST != $LocalServer)
   {
-    echo ("<p style='background-color:yellow;color:red;font-size:25px;'>ERROR: The upload systema has been invoked from the wrong addresss.</p><p> Please send an email to ludwig.moreno@gmail.com with Orthanc-PDF2DCM in the subject</p>");
+    echo ("<p style='background-color:yellow;color:red;font-size:25px;'>ERROR: The upload systema has been invoked from the wrong addresss.</p><p> Please send an email to ludwig.moreno@gmail.com with Orthanc-IMG2DCM in the subject</p>");
   }
   else
   {
@@ -45,12 +46,7 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
     if (file_put_contents($source, $data))
     {
       // echo "<p>The image was saved as $source.</p>";
-    }
-    else
-    {
-      echo "<p>The image could not be saved.</p>";
-    }
-    // Prepare the system via REST to extract json from current Code to get an instanceId
+          // Prepare the system via REST to extract json from current Code to get an instanceId
     $OrthancRESTpatients  = '/patients';
     $OrthancRESTstudies   = '/studies';
     $OrthancRESTinstances = '/instances';
@@ -62,48 +58,42 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
     {
       $OrthancRESTcode      = $OrthancRESTpatients;
     }
-    // Fetch the first instance belonging to the $PathCode;
+    // Fetch the first instanceId belonging to the $PathCode;
     // echo '$OrthancRESTcode 0 '. $OrthancRESTcode  . " <br />";
     $json_string          = $OrthancUrl . $OrthancRESTcode . "/" . $PathCode . $OrthancRESTinstances;
     $jsondata             = file_get_contents($json_string);
     $obj                  = json_decode($jsondata, true);
     $obj                  = array_shift($obj);
-    $obj['ID'];
+    // $obj['ID'];
     $instanceId   = $obj['ID'];
     $dcmExtension = ".dcm";
     $dcmTemplate  = $filesPlace . "/" . $instanceId . $dcmExtension;
-    // Open file descriptor
-    $fp           = fopen($dcmTemplate, 'w+') or die('Process error, please contact the administrator.');
-    // Download the instance from Orthanc Dicom Server to local filesystem
-    $ch           = curl_init($OrthancUrl . $OrthancRESTinstances . "/" . $instanceId . "/file");
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_FILE, $fp);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 1000);
-    curl_setopt($ch, CURLOPT_USERAGENT, 'any');
-    curl_setopt($ch, CURLOPT_VERBOSE, true);
-    curl_exec($ch);
-    curl_close($ch);
-    fclose($fp);
-    // echo "template: " . $dcmTemplate . " <br />";
-    // $chkfile = 'file ' . $dcmTemplate;
-    // echo (exec($chkfile)) . " <br />";
-    // echo "source: " . $source . " <br />";
-    // $chkfile = 'file ' . $source;
-    // echo (exec($chkfile)) . " <br />";
-    // Fix Date and  Tags
+    
+              // Donwload the DICOM file template belonging to parent study
+              $downloadCMD = "curl -v http://localhost:8042/instances/". $instanceId . "/file" . " --output " . $dcmTemplate;
+              exec($downloadCMD);
+    
+              // echo "Download command: " . $downloadCMD . " <br />";
+              // echo "Downloaded file: " .$dcmTemplate  . " <br />";
+
+        // Fix Date and  Tags
     $timeCap    = date('Ymd');
     $tags       = ' -k &quot;StudyDate&quot;=' . $timeCap . ' -k &quot;SeriesDate&quot;=' . $timeCap . ' -k &quot;AcquisitionDate&quot;=' . $timeCap . ' -k &quot;StudyDescription&quot;=Image -k &quot;Modality&quot;=XC -k &quot;InstanceNumber&quot;=1 -k &quot;Manufacturer&quot;=&quot;cloud dicomized at misimagenes.online&quot;';
+
+
     $cmdFxdTags = htmlspecialchars_decode($tags, ENT_QUOTES);
     // echo "Fecha: " . $timeCap . " <br />";
     // echo "DICOM tags: " . $cmdFxdTags . " <br />";
-    // Create the DCM with with corresponding tags imported from $InstanceId.dcms using DCMTK's img2dcm
+      
+    // Create the DCM with with corresponding tags imported from $InstanceId.dcm using DCMTK's img2dcm
     $uncompressedDCM = $filesPlace . '/img_output.dcm';
     $cmdP2D          = 'img2dcm ' . $source . ' ' . $uncompressedDCM . ' -stf ' . $dcmTemplate . $cmdFxdTags;
     exec($cmdP2D);
-    // echo $cmdP2D . " <br />";
+    // echo "cmdP2D: ". $cmdP2D . " <br />";
+
     // Free the memory
-    imagedestroy($source);
+    $data="";
+
     //Create a new StudyInstanceUID if necessary
     if ($urlBlocks[0] === 'patient')
     {
@@ -113,25 +103,15 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
     }
     // echo "file before compression: " . $uncompressedDCM . " <br />";
     $chkfile = 'file ' . $uncompressedDCM;
+    
     // echo (exec($chkfile)) . " <br />";
-          // Upload the newly created .dcm in the Orthanc Dicom Server
-          $post_url = $OrthancUrl . $OrthancRESTinstances;
-          $post_str = file_get_contents($uncompressedDCM);
-          $headers  = "Expect: ";
-          $ch       = curl_init();
-          $ch       = curl_init();
-          curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-          curl_setopt($ch, CURLOPT_URL, $post_url);
-          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-          curl_setopt($ch, CURLOPT_POST, true);
-          curl_setopt($ch, CURLOPT_POSTFIELDS, $post_str);
-          curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
-          curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
-          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-          curl_setopt($ch, CURLOPT_VERBOSE, true);
-          curl_setopt($ch, CURLOPT_STDERR, fopen("header.txt", "w+"));
-          $http_body = curl_exec($ch);
-          curl_close($ch);
+      
+    // Upload the newly created .dcm in the Orthanc Dicom Server
+          // Use DCMTK dcmsend
+    $cmdDCMsend = "dcmsend 127.0.0.1 4242 " . $uncompressedDCM;
+    exec($cmdDCMsend);
+          // echo 'The file was uploaded with the command: '.$cmdDCMsend. " <br />";
+
     // Delete temporal files
     $cmdDELtemp = 'rm -r ' . $filesPlace;
     // exec($cmdDELtemp);
@@ -139,12 +119,19 @@ if (count($_POST) && (strpos($_POST['img'], 'data:image') === 0))
     // Smile
     // echo "<p>The pdf file upload was successfull.</p>";
     // sleep(3);
-    // Redirect this window to the calling page
+    
+      // Redirect this window to the calling page
     $stringAlfa  = '<script type= &quot;text/javascript &quot;> document.location.href = &quot;';
     $stringOmega = '&quot;; </script>';
     $callingURL  = $OrthancExplorer . "#" . $urlBlocks[0] . "?uuid=" . $PathCode;
     // echo $callingURL . " <br />";
     echo htmlspecialchars_decode($stringAlfa) . $callingURL . htmlspecialchars_decode($stringOmega);
+    }
+    else
+    {
+    echo "<p>The image could not be saved. Please contact administrator.</p>";
+    }
+
   } #endIF
     
 } #endIF
